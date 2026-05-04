@@ -75,7 +75,7 @@ export default function HeroSection() {
             backdropFilter: "blur(8px)",
           }}
         >
-          <span style={{ fontSize: 14 }}>🇰🇷</span>
+          <span style={{ fontSize: 14 }}>🇰🇷 🇹🇭</span>
           <span style={{ color: "rgba(255,255,255,0.92)", fontSize: 12, fontWeight: 500, letterSpacing: "0.5px" }}>
             พาร์ทเนอร์เกาหลีของคุณ · 당신의 한국인 파트너
           </span>

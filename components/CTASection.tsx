@@ -158,17 +158,36 @@ export default function CTASection() {
           </a>
         </div>
 
-        {/* Fine print */}
-        <p
-          style={{
-            marginTop: 18,
-            fontSize: 12,
-            color: "#a0aec0",
-            lineHeight: 1.6,
-          }}
-        >
-          🔒 ข้อมูลของคุณปลอดภัย · ไม่มีค่าใช้จ่ายสำหรับการปรึกษา
-        </p>
+        {/* Fine print & Privacy Policy */}
+        <div style={{ marginTop: 18, textAlign: "center" }}>
+          <p
+            style={{
+              fontSize: 12,
+              color: "#a0aec0",
+              lineHeight: 1.6,
+              margin: 0,
+            }}
+          >
+            🔒 ข้อมูลของคุณปลอดภัย · ไม่มีค่าใช้จ่ายสำหรับการปรึกษา
+          </p>
+          <a
+            href="https://docs.google.com/document/d/e/2PACX-1vQIjmBDUa6lTRNLATBxdh7Haa3BOYAjX8F66nfSLMvfXW4dXRJuT-MW4HwonfigVfaP_c4ZgqpvgPyz/pub"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{
+              fontSize: 11,
+              color: "#cbd5e0",
+              textDecoration: "underline",
+              display: "inline-block",
+              marginTop: 6,
+              transition: "color 0.2s ease",
+            }}
+            onMouseOver={(e) => (e.currentTarget.style.color = "#a0aec0")}
+            onMouseOut={(e) => (e.currentTarget.style.color = "#cbd5e0")}
+          >
+            Privacy Policy (개인정보처리방침)
+          </a>
+        </div>
       </div>
     </section>
   );

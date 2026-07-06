@@ -45,7 +45,6 @@ export default function Navbar({ scrolled }: NavbarProps) {
             priority
             style={{
               objectFit: "contain",
-              borderRadius: 9,
               flexShrink: 0,
             }}
           />

@@ -126,11 +126,9 @@ export default function CTASection() {
 
           <a
             id="cta-fb-btn"
-            href="#"
-            onClick={(e) => {
-              e.preventDefault();
-              alert("준비 중입니다! / กำลังเตรียมการ");
-            }}
+            href="https://m.me/easyk.help"
+            target="_blank"
+            rel="noopener noreferrer"
             style={{
               display: "flex",
               alignItems: "center",
@@ -156,21 +154,40 @@ export default function CTASection() {
             <svg width="20" height="20" viewBox="0 0 24 24" fill="white">
               <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
             </svg>
-            Facebook Messenger (Coming Soon)
+            Facebook Messenger
           </a>
         </div>
 
-        {/* Fine print */}
-        <p
-          style={{
-            marginTop: 18,
-            fontSize: 12,
-            color: "#a0aec0",
-            lineHeight: 1.6,
-          }}
-        >
-          🔒 ข้อมูลของคุณปลอดภัย · ไม่มีค่าใช้จ่ายสำหรับการปรึกษา
-        </p>
+        {/* Fine print & Privacy Policy */}
+        <div style={{ marginTop: 18, textAlign: "center" }}>
+          <p
+            style={{
+              fontSize: 12,
+              color: "#a0aec0",
+              lineHeight: 1.6,
+              margin: 0,
+            }}
+          >
+            🔒 ข้อมูลของคุณปลอดภัย · ไม่มีค่าใช้จ่ายสำหรับการปรึกษา
+          </p>
+          <a
+            href="https://docs.google.com/document/d/e/2PACX-1vQIjmBDUa6lTRNLATBxdh7Haa3BOYAjX8F66nfSLMvfXW4dXRJuT-MW4HwonfigVfaP_c4ZgqpvgPyz/pub"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{
+              fontSize: 11,
+              color: "#cbd5e0",
+              textDecoration: "underline",
+              display: "inline-block",
+              marginTop: 6,
+              transition: "color 0.2s ease",
+            }}
+            onMouseOver={(e) => (e.currentTarget.style.color = "#a0aec0")}
+            onMouseOut={(e) => (e.currentTarget.style.color = "#cbd5e0")}
+          >
+            Privacy Policy (개인정보처리방침)
+          </a>
+        </div>
       </div>
     </section>
   );

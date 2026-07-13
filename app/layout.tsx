@@ -3,8 +3,7 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: "Kori Care | บริการช่วยเหลือคนไทยในเกาหลี (한국 거주 태국인을 위한 종합 지원)",
-  description:
-    "หากคุณอาศัยอยู่ในเกาหลีและกำลังเผชิญกับความลำบาก ไม่ว่าเรื่องอะไร... ทักมาคุยกับเราได้เลย เรายินดีช่วยเหลือคุณในทุกเรื่อง! 한국 거주 태국인 비자, 임금, 병원 등 상담 지원 서비스 Kori Care (코리케어)",
+  description: "Your lifestyle helper in Korea.",
   keywords: [
     "Kori Care", "코리케어", "โครีแคร์", "Korea", "Thailand", "Life Helper", "ช่วยเหลือ", "เกาหลี", 
     "คนไทยในเกาหลี", "วีซ่าเกาหลี", "ทำงานเกาหลี", "โรงพยาบาลเกาหลี", "เรียกรถแท็กซี่เกาหลี", "แผนที่เกาหลี", 
@@ -13,9 +12,23 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: "Kori Care | บริการช่วยเหลือคนไทยในเกาหลี",
-    description: "มีปัญหาที่เกาหลี? วีซ่า, เงินเดือน, โรงพยาบาล, กฎหมาย ไม่ต้องปวดหัวอีกต่อไป! ปรึกษาฟรีกับเพื่อนคนเกาหลี 100%",
+    description: "Your lifestyle helper in Korea.",
     type: "website",
     siteName: "Kori Care",
+    images: [
+      {
+        url: "/koricare_main_logo_nobg.png",
+        width: 512,
+        height: 512,
+        alt: "Kori Care Logo",
+      }
+    ],
+  },
+  twitter: {
+    card: "summary",
+    title: "Kori Care | บริการช่วยเหลือคนไทยในเกาหลี",
+    description: "Your lifestyle helper in Korea.",
+    images: ["/koricare_main_logo_nobg.png"],
   },
 };
 

@@ -104,7 +104,7 @@ export default function FloatingButtons() {
       <button
         id="fab-main-btn"
         onClick={() => setExpanded(!expanded)}
-        aria-label="คุยกับเพื่อน Easy-K"
+        aria-label="คุยกับเพื่อน Kori Care"
         style={{
           width: 60,
           height: 60,
@@ -175,7 +175,7 @@ export default function FloatingButtons() {
             boxShadow: "0 2px 10px rgba(0,35,102,0.3)",
           }}
         >
-          คุยกับเพื่อน Easy-K
+          คุยกับเพื่อน Kori Care
           <div
             style={{
               position: "absolute",

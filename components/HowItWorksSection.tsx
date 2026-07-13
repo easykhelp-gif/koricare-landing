@@ -13,7 +13,7 @@ const steps = [
     num: "02",
     icon: "🤝",
     title: "เราช่วยทันที",
-    desc: "Easy-K รับเรื่องและดำเนินการให้ เหมือนมีเพื่อนคนเกาหลีช่วยทำทุกอย่าง",
+    desc: "Kori Care รับเรื่องและดำเนินการให้ เหมือนมีเพื่อนคนเกาหลีช่วยทำทุกอย่าง",
   },
   {
     id: "step3",
@@ -79,7 +79,7 @@ export default function HowItWorksSection() {
               marginBottom: 8,
             }}
           >
-            ใช้งาน Easy-K
+            ใช้งาน Kori Care
             <br />
             ง่ายมาก เพียง 3 ขั้นตอน
           </h2>

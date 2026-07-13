@@ -38,10 +38,10 @@ export default function Navbar({ scrolled }: NavbarProps) {
         {/* Brand logo: clean icon + text */}
         <div style={{ display: "flex", alignItems: "center", gap: 9 }}>
           <Image
-            src="/icon.png"
-            alt="Easy-K"
-            width={36}
-            height={36}
+            src="/koricare_main_logo_nobg.png"
+            alt="Kori Care"
+            width={38}
+            height={38}
             priority
             style={{
               objectFit: "contain",
@@ -61,7 +61,7 @@ export default function Navbar({ scrolled }: NavbarProps) {
                 textShadow: scrolled ? "none" : "0 1px 8px rgba(0,0,0,0.35)",
               }}
             >
-              Easy-K
+              Kori Care
             </span>
             <span
               style={{

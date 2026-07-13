@@ -77,7 +77,7 @@ export default function ServicesSection() {
             marginBottom: 10,
           }}
         >
-          Easy-K ช่วยคุณได้
+          Kori Care ช่วยคุณได้
           <br />
           <span style={{ color: "#002366" }}>ในทุกเรื่อง</span>
         </h2>

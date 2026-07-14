@@ -30,6 +30,11 @@ export const metadata: Metadata = {
     description: "Your lifestyle helper in Korea.",
     images: ["/koricare_main_logo_nobg.png"],
   },
+  icons: {
+    icon: "/koricare_main_logo_nobg.png",
+    shortcut: "/koricare_main_logo_nobg.png",
+    apple: "/koricare_main_logo_nobg.png",
+  },
 };
 
 export const viewport: Viewport = {

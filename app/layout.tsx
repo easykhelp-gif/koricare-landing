@@ -54,6 +54,29 @@ export default function RootLayout({
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              "name": "Kori Care",
+              "alternateName": ["코리케어", "โครีแคร์"],
+              "url": "https://koricare.kr",
+              "logo": "https://koricare.kr/koricare_main_logo_nobg.png",
+              "sameAs": [
+                "https://m.me/easyk.help",
+                "https://line.me/R/ti/p/@768mkjml"
+              ],
+              "description": "Your lifestyle helper in Korea.",
+              "contactPoint": {
+                "@type": "ContactPoint",
+                "contactType": "customer support",
+                "availableLanguage": ["Thai", "Korean", "English"]
+              }
+            })
+          }}
+        />
       </head>
       <body>{children}</body>
     </html>

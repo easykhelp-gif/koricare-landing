@@ -35,6 +35,15 @@ export const metadata: Metadata = {
     shortcut: "/koricare_main_logo_nobg.png",
     apple: "/koricare_main_logo_nobg.png",
   },
+  alternates: {
+    canonical: "https://www.koricare.kr",
+    languages: {
+      "th-TH": "https://www.koricare.kr",
+      "ko-KR": "https://www.koricare.kr",
+      "en-US": "https://www.koricare.kr",
+      "x-default": "https://www.koricare.kr",
+    },
+  },
 };
 
 export const viewport: Viewport = {

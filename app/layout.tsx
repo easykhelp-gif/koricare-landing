@@ -74,7 +74,7 @@ export default function RootLayout({
               "url": "https://koricare.kr",
               "logo": "https://koricare.kr/koricare_main_logo_nobg.png",
               "sameAs": [
-                "https://m.me/easyk.help",
+                "https://m.me/koricare.kr",
                 "https://line.me/R/ti/p/@768mkjml"
               ],
               "description": "Your lifestyle helper in Korea.",

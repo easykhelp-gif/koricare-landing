@@ -170,7 +170,7 @@ export default function HeroSection() {
 
           <a
             id="hero-fb-btn"
-            href="https://m.me/easyk.help"
+            href="https://m.me/koricare.kr"
             target="_blank"
             rel="noopener noreferrer"
             style={{

@@ -126,7 +126,7 @@ export default function CTASection() {
 
           <a
             id="cta-fb-btn"
-            href="https://m.me/easyk.help"
+            href="https://m.me/koricare.kr"
             target="_blank"
             rel="noopener noreferrer"
             style={{

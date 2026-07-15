@@ -211,14 +211,15 @@ export default function HeroSection() {
               alignItems: "center",
               justifyContent: "center",
               gap: 10,
-              background: "#ffffff",
-              color: "#123a8a",
-              padding: "15px 24px",
+              background: "rgba(255,255,255,0.12)",
+              border: "1.5px solid rgba(255,255,255,0.4)",
+              color: "white",
+              padding: "14px 24px",
               borderRadius: 16,
               fontSize: 15,
-              fontWeight: 800,
+              fontWeight: 600,
               textDecoration: "none",
-              boxShadow: "0 8px 24px rgba(255,255,255,0.18)",
+              backdropFilter: "blur(8px)",
               transition: "all 0.25s ease",
             }}
             onTouchStart={(e) => {
@@ -228,7 +229,7 @@ export default function HeroSection() {
               (e.currentTarget as HTMLAnchorElement).style.transform = "scale(1)";
             }}
           >
-            🧭 รวมลิงก์ที่จำเป็น · 자주 쓰는 링크 ➔
+            🧭 รวมลิงก์ที่ใช้บ่อย · Useful Links
           </a>
         </div>
 

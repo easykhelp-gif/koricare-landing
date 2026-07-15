@@ -51,7 +51,7 @@ export default function HeroSection() {
           zIndex: 1,
           maxWidth: 480,
           margin: "0 auto",
-          padding: "80px 24px 0",
+          padding: "45px 24px 0",
           width: "100%",
           display: "flex",
           flexDirection: "column",
@@ -200,6 +200,35 @@ export default function HeroSection() {
               <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
             </svg>
             คุยกับเพื่อน Kori Care ผ่าน Messenger
+          </a>
+
+          {/* Link Portal CTA Button */}
+          <a
+            id="hero-portal-btn"
+            href="/link"
+            style={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              gap: 10,
+              background: "#ffffff",
+              color: "#123a8a",
+              padding: "15px 24px",
+              borderRadius: 16,
+              fontSize: 15,
+              fontWeight: 800,
+              textDecoration: "none",
+              boxShadow: "0 8px 24px rgba(255,255,255,0.18)",
+              transition: "all 0.25s ease",
+            }}
+            onTouchStart={(e) => {
+              (e.currentTarget as HTMLAnchorElement).style.transform = "scale(0.97)";
+            }}
+            onTouchEnd={(e) => {
+              (e.currentTarget as HTMLAnchorElement).style.transform = "scale(1)";
+            }}
+          >
+            🧭 รวมลิงก์ที่จำเป็น · 자주 쓰는 링크 ➔
           </a>
         </div>
 

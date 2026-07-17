@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>เครื่องคำนวณเงินชดเชย (퇴직금) เกาหลี สำหรับคนต่างชาติ | Kori Care</title>
+<meta name="description" content="เครื่องคำนวณเงินชดเชยเลิกจ้าง (퇴직금) ในเกาหลี สำหรับแรงงานต่างชาติ รวมถึงผู้ที่วีซ่าหมด/อยู่เกินกำหนด แค่กรอกเงินเดือนและระยะเวลาทำงาน ก็รู้ยอดโดยประมาณ พร้อมคำแนะนำเรื่องประกันครบกำหนดออกและวิธีเรียกร้อง">
+<meta name="keywords" content="เครื่องคำนวณเงินชดเชยเกาหลี, เงินชดเชยเลิกจ้างเกาหลี, 퇴직금, แรงงานไทยในเกาหลี, ประกันครบกำหนดออก, คนไทยในเกาหลี, ทำงานเกาหลี, วีซ่าหมดเงินชดเชย, E-9, H-2">
+<link rel="canonical" href="https://koricare.kr/th/severance-calculator">
+<link rel="alternate" hreflang="ko" href="https://koricare.kr/severance-calculator">
+<link rel="alternate" hreflang="th" href="https://koricare.kr/th/severance-calculator">
+<link rel="alternate" hreflang="en" href="https://koricare.kr/en/severance-calculator">
+<link rel="alternate" hreflang="x-default" href="https://koricare.kr/severance-calculator">
+<link rel="icon" type="image/png" href="https://koricare.kr/koricare_main_logo_nobg.png">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://koricare.kr/th/severance-calculator">
+<meta property="og:title" content="เครื่องคำนวณเงินชดเชย (퇴직금) เกาหลี สำหรับคนต่างชาติ | Kori Care">
+<meta property="og:description" content="กรอกเงินเดือนและระยะเวลาทำงาน แล้วรู้ยอดเงินชดเชยโดยประมาณ — คนต่างชาติและผู้ที่วีซ่าหมดก็มีสิทธิ์ได้">
+<meta property="og:image" content="https://koricare.kr/koricare_main_logo_nobg.png">
+<meta property="og:locale" content="th_TH">
+<meta property="og:site_name" content="Kori Care">
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"WebApplication",
+  "name":"เครื่องคำนวณเงินชดเชยเกาหลีสำหรับคนต่างชาติ",
+  "applicationCategory":"FinanceApplication",
+  "operatingSystem":"Web",
+  "url":"https://koricare.kr/th/severance-calculator",
+  "offers":{"@type":"Offer","price":"0","priceCurrency":"KRW"},
+  "description":"เครื่องคำนวณเงินชดเชยเลิกจ้างในเกาหลีสำหรับแรงงานต่างชาติ"
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;500;600;700;800&family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#f4f6fa; --card:#ffffff; --ink:#14203a; --sub:#5b6b86; --line:#e2e8f0;
+    --navy:#123a8a; --navy2:#0e2f72; --chip:#e8edf7; --ok:#1f9d6b; --okbg:#e7f6ef;
+    --red:#d63a3a; --amber:#b7791f; --amberbg:#fdf3e2;
+    --shadow:0 8px 24px rgba(148,163,184,.10), 0 2px 6px rgba(148,163,184,.06);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{-webkit-text-size-adjust:100%}
+  body{background:var(--bg);color:var(--ink);
+    font-family:"Noto Sans Thai","Inter",system-ui,sans-serif;font-size:16px;line-height:1.75;
+    -webkit-font-smoothing:antialiased;padding-bottom:48px}
+  .wrap{max-width:560px;margin:0 auto;padding:0 16px}
+  a{text-decoration:none;color:inherit}
+  header{background:var(--navy);color:#fff}
+  .hrow{max-width:560px;margin:0 auto;padding:13px 16px;display:flex;align-items:center;justify-content:space-between}
+  .logo{display:flex;align-items:center;gap:9px}
+  .mark{width:34px;height:34px;border-radius:9px;background:#fff;color:var(--navy);
+    display:flex;align-items:center;justify-content:center;font-weight:800;font-size:18px}
+  .logo b{font-size:18px;font-weight:800;letter-spacing:-.4px}
+  .logo span{display:block;font-size:10.5px;color:#c3d0ec;font-weight:600;margin-top:-2px}
+  .flags{font-size:18px;letter-spacing:3px}
+
+  .hero{background:var(--navy);color:#fff;padding:8px 0 26px}
+  .hero h1{font-size:24px;font-weight:800;line-height:1.4;letter-spacing:-.3px}
+  .hero h1 .hl{color:#ffd166}
+  .hero p{font-size:14px;color:#c9d5ef;margin-top:10px;line-height:1.65}
+
+  .card{background:var(--card);border-radius:18px;box-shadow:var(--shadow);padding:22px 20px;margin-top:-14px}
+  .note{background:#f0f4fb;border:1px solid #dde6f6;border-radius:13px;padding:14px 16px;font-size:13.5px;
+    color:#3c4c68;line-height:1.7;margin-bottom:20px}
+  .note b{color:var(--navy2)}
+
+  .toglab{font-size:12.5px;font-weight:700;color:var(--sub);letter-spacing:.2px;margin-bottom:8px}
+  .toggle{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:22px}
+  .toggle button{font-family:inherit;font-size:14px;font-weight:700;padding:13px 8px;border-radius:13px;
+    border:2px solid var(--line);background:#fff;color:var(--sub);cursor:pointer;line-height:1.35;transition:.15s}
+  .toggle button small{display:block;font-size:11px;font-weight:500;margin-top:3px;opacity:.75}
+  .toggle button.on{border-color:var(--navy);background:#eef3fc;color:var(--navy2)}
+
+  .field{margin-bottom:18px}
+  .field label{display:block;font-size:14px;font-weight:700;color:var(--ink);margin-bottom:7px}
+  .field .hint{font-size:12px;color:var(--sub);font-weight:500}
+  .inbox{position:relative;flex:1}
+  .inbox input{width:100%;font-family:inherit;font-size:19px;font-weight:700;color:var(--ink);
+    padding:15px 56px 15px 16px;border:2px solid var(--line);border-radius:13px;background:var(--bg);outline:none;text-align:right}
+  .inbox input:focus{border-color:var(--navy);background:#fff}
+  .inbox input::-webkit-outer-spin-button,.inbox input::-webkit-inner-spin-button{-webkit-appearance:none;margin:0}
+  .inbox input[type=number]{-moz-appearance:textfield}
+  .inbox .unit{position:absolute;right:15px;top:50%;transform:translateY(-50%);font-size:13px;font-weight:700;color:var(--sub)}
+  .dur{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+
+  .calc{width:100%;font-family:inherit;font-size:17px;font-weight:800;color:#fff;background:var(--navy);
+    border:none;border-radius:14px;padding:17px;cursor:pointer;margin-top:4px}
+  .calc:active{transform:scale(.99)}
+
+  .result{display:none;margin-top:22px}
+  .result.show{display:block;animation:fade .3s ease}
+  @keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+  .rbox{background:linear-gradient(160deg,#123a8a,#0e2f72);color:#fff;border-radius:16px;padding:24px 20px;text-align:center}
+  .rbox .lab{font-size:13px;color:#bcccf0;font-weight:600}
+  .rbox .amt{font-size:32px;font-weight:800;letter-spacing:-.5px;margin:6px 0 2px;line-height:1.25}
+  .rbox .amt .won{font-size:19px;font-weight:700}
+  .rbox .sub{font-size:13px;color:#c9d5ef;margin-top:4px}
+  .disc{background:var(--amberbg);border:1px solid #f0dcb4;border-radius:12px;padding:13px 15px;
+    font-size:12.5px;color:#7a5a1a;line-height:1.7;margin-top:14px}
+  .guide{border-radius:13px;padding:16px 17px;margin-top:14px;font-size:13.5px;line-height:1.7}
+  .guide.legal{background:#eef3fc;border:1px solid #d7e3f7;color:#2b3d5e}
+  .guide.undoc{background:var(--okbg);border:1px solid #c4e9d6;color:#1c5a41}
+  .guide b{font-weight:800}
+  .guide .gt{font-weight:800;font-size:14.5px;display:block;margin-bottom:6px}
+
+  .actions{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:16px}
+  .btn{display:flex;align-items:center;justify-content:center;gap:7px;font-weight:800;font-size:14px;
+    padding:15px 8px;border-radius:13px;border:none;cursor:pointer;font-family:inherit;line-height:1.2;text-align:center}
+  .btn.line{background:#06C755;color:#fff} .btn.msg{background:#0866ff;color:#fff}
+  .btn.share{background:#fff;color:var(--navy2);border:2px solid var(--navy);grid-column:1 / -1}
+
+  .foot{text-align:center;font-size:12px;color:#9aa6bd;margin-top:26px;line-height:1.8}
+  .foot a{color:var(--navy2);font-weight:700}
+</style>
+</head>
+<body>
+<header>
+  <div class="hrow">
+    <div class="logo"><div class="mark">K</div><div><b>Kori Care</b><span>เพื่อนคนเกาหลีของคุณ</span></div></div>
+    <div class="flags">🇰🇷 🇹🇭</div>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="wrap">
+    <h1>เครื่องคำนวณ<span class="hl">เงินชดเชย (퇴직금)</span></h1>
+    <p>ทำงานในเกาหลี 1 ปีขึ้นไป? ไม่ว่าสัญชาติหรือวีซ่าใด คุณมีสิทธิ์ได้รับเงินชดเชย ลองกรอกเงินเดือนและระยะเวลาทำงานดู</p>
+  </div>
+</div>
+
+<div class="wrap">
+  <div class="card">
+    <div class="note">
+      <b>เงินชดเชย (퇴직금) คืออะไร?</b> คือเงินที่นายจ้างต้องจ่ายให้ลูกจ้างที่ทำงานที่เดียว <b>1 ปีขึ้นไป</b> โดยประมาณ <b>“เงินเดือนเฉลี่ย 1 เดือน × จำนวนปีที่ทำงาน”</b> — <b>คนต่างชาติ และผู้ที่อยู่เกินกำหนด (วีซ่าหมด) ก็รวมอยู่ด้วยทั้งหมด</b>
+    </div>
+
+    <div class="toglab">เลือกสถานะของคุณ</div>
+    <div class="toggle">
+      <button id="tLegal" class="on" onclick="setType('legal')">วีซ่าถูกต้อง<small>E-9 · H-2 · F ฯลฯ</small></button>
+      <button id="tUndoc" onclick="setType('undoc')">วีซ่าหมด · อื่นๆ<small>อยู่เกินกำหนด</small></button>
+    </div>
+
+    <div class="field">
+      <label>เงินเดือนที่ได้รับ 3 เดือนล่าสุด <span class="hint">(เฉลี่ย ก่อนหักภาษี)</span></label>
+      <div class="inbox"><input id="salary" type="text" inputmode="numeric" placeholder="เช่น 2,500,000" oninput="fmt(this)"><span class="unit">วอน</span></div>
+    </div>
+
+    <div class="field">
+      <label>ระยะเวลาที่ทำงาน</label>
+      <div class="dur">
+        <div class="inbox"><input id="years" type="number" inputmode="numeric" placeholder="0"><span class="unit">ปี</span></div>
+        <div class="inbox"><input id="months" type="number" inputmode="numeric" placeholder="0"><span class="unit">เดือน</span></div>
+      </div>
+    </div>
+
+    <button class="calc" onclick="calc()">คำนวณเงินชดเชย</button>
+
+    <div class="result" id="result">
+      <div class="rbox">
+        <div class="lab">เงินชดเชยโดยประมาณ</div>
+        <div class="amt" id="amt">– <span class="won">วอน</span></div>
+        <div class="sub" id="range"></div>
+      </div>
+      <div class="disc" id="disc">
+        ※ ยอดนี้เป็น <b>ค่าประมาณคร่าวๆ</b> ยอดจริงอาจ <b>สูงขึ้น</b> ถ้ารวมโบนัส/ค่าล่วงเวลา และอาจ <b>ลดลงเล็กน้อย</b> จากภาษี ยอดที่แน่นอนต้องตรวจจากสลิปเงินเดือน
+      </div>
+      <div class="guide legal" id="guideLegal">
+        <span class="gt">💼 ถ้าคุณถือวีซ่าถูกต้อง (E-9·H-2)</span>
+        เงินชดเชยส่วนใหญ่ถูกสะสมไว้ใน <b>“ประกันครบกำหนดออกนอกประเทศ (출국만기보험)”</b> แล้ว แต่ถ้า <b>เงินชดเชยตามกฎหมายมากกว่าเงินประกัน นายจ้างต้องจ่ายส่วนต่างเพิ่ม</b> อย่ารับแค่เงินประกันแล้วกลับบ้าน — <b>ตรวจสอบส่วนต่างก่อน</b>
+      </div>
+      <div class="guide undoc" id="guideUndoc" style="display:none">
+        <span class="gt">🛡️ แม้วีซ่าหมด/อยู่เกินกำหนด</span>
+        สิทธิเรียกร้องเงินชดเชย <b>ยังมีอยู่</b> (ตามคำพิพากษาศาลฎีกาเกาหลี) เพราะไม่มีประกันครบกำหนดออก จึงต้อง <b>เรียกจากนายจ้างโดยตรง</b> และ <b>แม้กลับไทยแล้วก็มอบอำนาจให้ตัวแทนเรียกร้องได้ภายใน 3 ปี</b> ถึงนายจ้างจะขู่ “จะแจ้ง ตม.” — <b>ตั้งแต่ พ.ย. 2025 สำนักงานแรงงานจะไม่แจ้ง ตม. สำหรับเหยื่อค่าจ้างค้างจ่าย</b>
+      </div>
+
+      <div class="actions">
+        <a class="btn line" href="https://line.me/R/ti/p/@768mkjml" target="_blank" rel="noopener">📱 ปรึกษา LINE</a>
+        <a class="btn msg" href="https://m.me/koricare.kr" target="_blank" rel="noopener">💬 ปรึกษา Messenger</a>
+        <button class="btn share" onclick="share()">📤 แชร์เครื่องคำนวณนี้</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="foot">
+    ปรึกษา 1:1 ฟรี · เป็นความลับ · <a href="https://koricare.kr">koricare.kr</a><br>
+    Kori Care — เพื่อนช่วยชีวิตประจำวันของคนต่างชาติในเกาหลี
+  </div>
+</div>
+
+<script>
+  let vtype = "legal";
+  let hasValidResult = false; // flag for calculation success
+
+  function setType(t){
+    vtype = t;
+    document.getElementById("tLegal").classList.toggle("on", t==="legal");
+    document.getElementById("tUndoc").classList.toggle("on", t==="undoc");
+    if(hasValidResult) swapGuide();
+  }
+  function swapGuide(){
+    document.getElementById("guideLegal").style.display = vtype==="legal" ? "block":"none";
+    document.getElementById("guideUndoc").style.display = vtype==="undoc" ? "block":"none";
+  }
+  function won(n){ return Math.round(n).toLocaleString("en-US"); }
+  function fmt(el){
+    let d = el.value.replace(/[^\d]/g,"");
+    el.value = d ? Number(d).toLocaleString("en-US") : "";
+  }
+  function calc(){
+    const salary = parseFloat((document.getElementById("salary").value||"").replace(/,/g,""))||0;
+    const y = parseFloat(document.getElementById("years").value)||0;
+    const m = parseFloat(document.getElementById("months").value)||0;
+    const res = document.getElementById("result");
+    const totalDays = y*365 + m*30;
+    const amtEl = document.getElementById("amt");
+    const rangeEl = document.getElementById("range");
+    const discEl = document.getElementById("disc");
+
+    if(salary<=0 || totalDays<=0){
+      hasValidResult = false;
+      res.classList.add("show");
+      amtEl.innerHTML = 'กรุณาตรวจข้อมูล';
+      rangeEl.textContent = 'กรอกเงินเดือนและระยะเวลาทำงาน';
+      discEl.style.display="none";
+      document.getElementById("guideLegal").style.display="none";
+      document.getElementById("guideUndoc").style.display="none";
+      return;
+    }
+
+    if(totalDays < 365){
+      hasValidResult = false;
+      res.classList.add("show");
+      amtEl.innerHTML = 'ไม่เข้าเกณฑ์';
+      rangeEl.innerHTML = 'เงินชดเชยตามกฎหมายต้องทำงาน <b>1 ปีขึ้นไป</b> (แต่ค่าจ้าง/ค่าล่วงเวลาที่ยังไม่ได้รับ เรียกได้ต่างหาก)';
+      document.getElementById("guideLegal").style.display="none";
+      document.getElementById("guideUndoc").style.display="none";
+      res.scrollIntoView({behavior:"smooth", block:"center"});
+      return;
+    }
+
+    hasValidResult = true;
+    discEl.style.display="block";
+
+    const dailyAvg = (salary*3) / 91.25;
+    const base = dailyAvg * 30 * (totalDays/365);
+    const low  = base * 0.95;
+    const high = base * 1.20;
+    res.classList.add("show");
+    amtEl.innerHTML = 'ประมาณ ' + won(base) + ' <span class="won">วอน</span>';
+    rangeEl.innerHTML = 'ช่วงประมาณ <b>'+won(low)+'</b> ~ <b>'+won(high)+'</b> วอน';
+    swapGuide();
+    res.scrollIntoView({behavior:"smooth", block:"center"});
+  }
+  function share(){
+    const url = "https://koricare.kr/th/severance-calculator";
+    if(navigator.share){ navigator.share({title:"เครื่องคำนวณเงินชดเชยเกาหลี | Kori Care", url:url}).catch(()=>{}); }
+    else{ window.open("https://www.facebook.com/sharer/sharer.php?u="+encodeURIComponent(url),"_blank"); }
+  }
+</script>
+</body>
+</html>

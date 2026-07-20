@@ -54,15 +54,58 @@ const testimonials = [
 ];
 
 export default function TestimonialsSection() {
+  const handleWheel = (e: React.WheelEvent<HTMLDivElement>) => {
+    const container = e.currentTarget;
+    const canScroll = container.scrollWidth > container.clientWidth;
+    if (canScroll && e.deltaY !== 0) {
+      const isAtStart = container.scrollLeft === 0 && e.deltaY < 0;
+      const isAtEnd = Math.abs(container.scrollWidth - container.clientWidth - container.scrollLeft) < 1 && e.deltaY > 0;
+      if (!isAtStart && !isAtEnd) {
+        container.scrollLeft += e.deltaY * 0.8;
+        e.preventDefault();
+      }
+    }
+  };
+
   return (
     <section
       id="testimonials"
       style={{
-        padding: "0 20px 60px",
+        padding: "80px 20px 10px",
         maxWidth: 480,
         margin: "0 auto",
       }}
     >
+      {/* CSS Injection for Speech Bubble Pointer and Scrollbar hiding */}
+      <style dangerouslySetInnerHTML={{ __html: `
+        .reviews-slider::-webkit-scrollbar {
+          display: none;
+        }
+        .chat-bubble {
+          position: relative;
+          background: white;
+          border-radius: 18px;
+          padding: 14px 16px;
+          box-shadow: 0 8px 24px rgba(0, 35, 102, 0.08);
+          border: 1px solid rgba(0, 35, 102, 0.04);
+          min-width: 0;
+          flex: 1;
+        }
+        .chat-bubble::after {
+          content: "";
+          position: absolute;
+          left: -5px;
+          top: 15px;
+          width: 10px;
+          height: 10px;
+          background: white;
+          border-left: 1.5px solid rgba(0, 35, 102, 0.05);
+          border-bottom: 1.5px solid rgba(0, 35, 102, 0.05);
+          transform: rotate(45deg);
+          box-shadow: -2px 2px 3px rgba(0, 35, 102, 0.01);
+        }
+      `}} />
+
       {/* Header */}
       <div className="reveal" style={{ textAlign: "center", marginBottom: 20 }}>
         <h2
@@ -84,7 +127,8 @@ export default function TestimonialsSection() {
 
       {/* Cards Slider Container */}
       <div 
-        className="reveal"
+        className="reviews-slider reveal"
+        onWheel={handleWheel}
         style={{ 
           display: "flex", 
           gap: 16,
@@ -130,18 +174,7 @@ export default function TestimonialsSection() {
             </div>
 
             {/* Right: Speech Bubble */}
-            <div
-              style={{
-                flex: 1,
-                background: "white",
-                borderRadius: "4px 18px 18px 18px",
-                padding: "14px 16px",
-                boxShadow: "0 6px 20px rgba(0,35,102,0.06)",
-                border: "1px solid rgba(0,35,102,0.05)",
-                position: "relative",
-                minWidth: 0,
-              }}
-            >
+            <div className="chat-bubble">
               {/* Review text */}
               <p
                 style={{

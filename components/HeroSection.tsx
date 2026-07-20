@@ -246,19 +246,9 @@ export default function HeroSection() {
               (e.currentTarget as HTMLAnchorElement).style.transform = "scale(1)";
             }}
           >
-            <div style={{ width: 20, height: 20, display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
-              <img
-                src="/koricare_main_logo_nobg.png"
-                alt="Kori Care Link"
-                width="20"
-                height="20"
-                style={{
-                  objectFit: "contain",
-                  filter: "brightness(0) invert(1)",
-                  display: "block",
-                }}
-              />
-            </div>
+            <span style={{ fontSize: 18, display: "inline-flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
+              🔗
+            </span>
             รวมลิงก์ที่ใช้บ่อย · Useful Links
           </a>
         </div>

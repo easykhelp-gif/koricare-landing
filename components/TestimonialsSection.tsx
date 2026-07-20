@@ -200,7 +200,7 @@ export default function TestimonialsSection() {
           gap: 16,
           overflowX: "auto",
           scrollSnapType: isDown ? "none" : "x mandatory",
-          padding: "10px 4px 24px",
+          padding: "10px 16px 24px",
           WebkitOverflowScrolling: "touch",
           cursor: isDown ? "grabbing" : "grab",
           userSelect: "none",
@@ -212,9 +212,9 @@ export default function TestimonialsSection() {
             id={t.id}
             style={{
               flexShrink: 0,
-              width: "84%",
-              maxWidth: "330px",
-              scrollSnapAlign: "center",
+              width: "78%",
+              maxWidth: "310px",
+              scrollSnapAlign: "start",
               display: "flex",
               gap: 12,
               alignItems: "flex-start",

@@ -102,7 +102,7 @@ export default function HeroSection() {
           className={loaded ? "animate-fade-up delay-100" : ""}
           style={{
             opacity: loaded ? 1 : 0,
-            fontSize: "clamp(26px, 7vw, 34px)",
+            fontSize: "clamp(23px, 6.2vw, 32px)",
             fontWeight: 800,
             color: "white",
             lineHeight: 1.3,

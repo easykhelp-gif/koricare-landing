@@ -112,7 +112,7 @@ export default function HeroSection() {
         >
           <span style={{ color: "#7eb3ff" }}>Kori Care</span> เพื่อนคนเกาหลี
           <br />
-          ที่พร้อมช่วยเหลือคุณในทุกเรื่อง
+          ที่พร้อมเคียงข้างและช่วยเหลือคุณ
         </h1>
 
         {/* Sub-headline */}
@@ -247,14 +247,15 @@ export default function HeroSection() {
             }}
           >
             <div style={{ width: 20, height: 20, display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
-              <Image
+              <img
                 src="/koricare_main_logo_nobg.png"
                 alt="Kori Care Link"
-                width={20}
-                height={20}
+                width="20"
+                height="20"
                 style={{
                   objectFit: "contain",
                   filter: "brightness(0) invert(1)",
+                  display: "block",
                 }}
               />
             </div>

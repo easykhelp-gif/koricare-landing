@@ -64,7 +64,7 @@ export default function TestimonialsSection() {
       }}
     >
       {/* Header */}
-      <div className="reveal" style={{ textAlign: "center", marginBottom: 24 }}>
+      <div className="reveal" style={{ textAlign: "center", marginBottom: 20 }}>
         <h2
           style={{
             fontSize: "clamp(20px, 5.5vw, 26px)",
@@ -78,73 +78,81 @@ export default function TestimonialsSection() {
           <span style={{ color: "#002366" }}> เพื่อนๆ ของเรา</span>
         </h2>
         <p style={{ color: "#718096", fontSize: 13.5 }}>
-          คนที่ใช้ Kori Care บอกว่าอย่างไร
+          เลื่อนซ้ายขวาเพื่อดูรีวิวจากผู้ใช้จริง
         </p>
       </div>
 
-      {/* Cards */}
-      <div style={{ display: "flex", flexDirection: "column", gap: 14 }}>
+      {/* Cards Slider Container */}
+      <div 
+        className="reveal"
+        style={{ 
+          display: "flex", 
+          gap: 16,
+          overflowX: "auto",
+          scrollSnapType: "x mandatory",
+          padding: "10px 4px 24px",
+          WebkitOverflowScrolling: "touch",
+          scrollbarWidth: "none",
+          msOverflowStyle: "none",
+        }}
+      >
         {testimonials.map((t) => (
           <div
             key={t.id}
             id={t.id}
-            className="reveal"
             style={{
-              background: "white",
-              borderRadius: 20,
-              padding: "20px",
-              boxShadow: "0 4px 20px rgba(0,35,102,0.07)",
-              border: "1px solid rgba(0,35,102,0.05)",
-              position: "relative",
-              overflow: "hidden",
+              flexShrink: 0,
+              width: "84%",
+              maxWidth: "330px",
+              scrollSnapAlign: "center",
+              display: "flex",
+              gap: 12,
+              alignItems: "flex-start",
+              boxSizing: "border-box",
             }}
           >
-            {/* Quote mark decoration */}
+            {/* Left: Avatar Bubble */}
             <div
               style={{
-                position: "absolute",
-                top: 12,
-                right: 16,
-                fontSize: 48,
-                color: "rgba(0,35,102,0.06)",
-                fontFamily: "Georgia, serif",
-                lineHeight: 1,
-                userSelect: "none",
+                width: 42,
+                height: 42,
+                borderRadius: "50%",
+                background: "linear-gradient(135deg, #e8f0ff, #f0e8ff)",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                fontSize: 22,
+                flexShrink: 0,
+                boxShadow: "0 4px 10px rgba(0,35,102,0.06)",
               }}
             >
-              "
+              {t.avatar}
             </div>
 
-            {/* Review text */}
-            <p
+            {/* Right: Speech Bubble */}
+            <div
               style={{
-                fontSize: 14,
-                color: "#4a5568",
-                lineHeight: 1.7,
-                marginBottom: 16,
-                fontStyle: "italic",
+                flex: 1,
+                background: "white",
+                borderRadius: "4px 18px 18px 18px",
+                padding: "14px 16px",
+                boxShadow: "0 6px 20px rgba(0,35,102,0.06)",
+                border: "1px solid rgba(0,35,102,0.05)",
+                position: "relative",
+                minWidth: 0,
               }}
             >
-              "{t.text}"
-            </p>
-
-            {/* Author */}
-            <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
-              <div
+              {/* Review text */}
+              <p
                 style={{
-                  width: 42,
-                  height: 42,
-                  borderRadius: "50%",
-                  background: "linear-gradient(135deg, #e8f0ff, #f0e8ff)",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  fontSize: 22,
-                  flexShrink: 0,
+                  fontSize: 13.5,
+                  color: "#4a5568",
+                  lineHeight: 1.6,
+                  margin: 0,
                 }}
               >
-                {t.avatar}
-              </div>
+                "{t.text}"
+              </p>
             </div>
           </div>
         ))}

@@ -1,5 +1,7 @@
 "use client";
 
+import { useRef, useState } from "react";
+
 const testimonials = [
   {
     id: "review1",
@@ -54,6 +56,36 @@ const testimonials = [
 ];
 
 export default function TestimonialsSection() {
+  const sliderRef = useRef<HTMLDivElement>(null);
+  const [isDown, setIsDown] = useState(false);
+  const [startX, setStartX] = useState(0);
+  const [scrollLeft, setScrollLeft] = useState(0);
+
+  const handleMouseDown = (e: React.MouseEvent) => {
+    const slider = sliderRef.current;
+    if (!slider) return;
+    setIsDown(true);
+    setStartX(e.pageX - slider.offsetLeft);
+    setScrollLeft(slider.scrollLeft);
+  };
+
+  const handleMouseLeave = () => {
+    setIsDown(false);
+  };
+
+  const handleMouseUp = () => {
+    setIsDown(false);
+  };
+
+  const handleMouseMove = (e: React.MouseEvent) => {
+    const slider = sliderRef.current;
+    if (!isDown || !slider) return;
+    e.preventDefault();
+    const x = e.pageX - slider.offsetLeft;
+    const walk = (x - startX) * 1.5; // Drag scroll speed multiplier
+    slider.scrollLeft = scrollLeft - walk;
+  };
+
   const handleWheel = (e: React.WheelEvent<HTMLDivElement>) => {
     const container = e.currentTarget;
     const canScroll = container.scrollWidth > container.clientWidth;
@@ -78,9 +110,38 @@ export default function TestimonialsSection() {
     >
       {/* CSS Injection for Speech Bubble Pointer and Scrollbar hiding */}
       <style dangerouslySetInnerHTML={{ __html: `
+        /* Default: hide scrollbar (mobile) */
         .reviews-slider::-webkit-scrollbar {
           display: none;
         }
+        .reviews-slider {
+          scrollbar-width: none;
+          -ms-overflow-style: none;
+        }
+
+        /* PC (Hover-enabled devices): show customized thin scrollbar */
+        @media (hover: hover) {
+          .reviews-slider {
+            scrollbar-width: thin !important;
+            -ms-overflow-style: auto !important;
+          }
+          .reviews-slider::-webkit-scrollbar {
+            display: block !important;
+            height: 6px !important;
+          }
+          .reviews-slider::-webkit-scrollbar-track {
+            background: rgba(0, 35, 102, 0.03) !important;
+            border-radius: 10px !important;
+          }
+          .reviews-slider::-webkit-scrollbar-thumb {
+            background: rgba(0, 35, 102, 0.12) !important;
+            border-radius: 10px !important;
+          }
+          .reviews-slider::-webkit-scrollbar-thumb:hover {
+            background: rgba(0, 35, 102, 0.25) !important;
+          }
+        }
+
         .chat-bubble {
           position: relative;
           background: white;
@@ -127,17 +188,22 @@ export default function TestimonialsSection() {
 
       {/* Cards Slider Container */}
       <div 
+        ref={sliderRef}
         className="reviews-slider reveal"
         onWheel={handleWheel}
+        onMouseDown={handleMouseDown}
+        onMouseLeave={handleMouseLeave}
+        onMouseUp={handleMouseUp}
+        onMouseMove={handleMouseMove}
         style={{ 
           display: "flex", 
           gap: 16,
           overflowX: "auto",
-          scrollSnapType: "x mandatory",
+          scrollSnapType: isDown ? "none" : "x mandatory",
           padding: "10px 4px 24px",
           WebkitOverflowScrolling: "touch",
-          scrollbarWidth: "none",
-          msOverflowStyle: "none",
+          cursor: isDown ? "grabbing" : "grab",
+          userSelect: "none",
         }}
       >
         {testimonials.map((t) => (

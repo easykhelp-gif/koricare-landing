@@ -112,7 +112,7 @@ export default function HeroSection() {
         >
           <span style={{ color: "#7eb3ff" }}>Kori Care</span> เพื่อนคนเกาหลี
           <br />
-          ที่พร้อมเคียงข้างและช่วยเหลือคุณ
+          <span style={{ whiteSpace: "nowrap" }}>ที่พร้อมเคียงข้างและช่วยเหลือคุณ</span>
         </h1>
 
         {/* Sub-headline */}

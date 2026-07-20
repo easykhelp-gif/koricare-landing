@@ -40,9 +40,9 @@ export default function Home() {
     <main className="min-h-screen" style={{ background: "var(--soft-white)" }}>
       <Navbar scrolled={scrolled} />
       <HeroSection />
+      <TestimonialsSection />
       <ServicesSection />
       <HowItWorksSection />
-      <TestimonialsSection />
       <CTASection />
       <FloatingButtons />
     </main>

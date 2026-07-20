@@ -81,6 +81,22 @@ export default function HeroSection() {
           </span>
         </div>
 
+        {/* Slogan */}
+        <div
+          className={loaded ? "animate-fade-up delay-75" : ""}
+          style={{
+            opacity: loaded ? 1 : 0,
+            color: "#7eb3ff",
+            fontSize: 13,
+            fontWeight: 700,
+            letterSpacing: "3px",
+            textTransform: "uppercase",
+            marginBottom: 10,
+          }}
+        >
+          Brave Steps, Safe Life.
+        </div>
+
         {/* Main headline */}
         <h1
           className={loaded ? "animate-fade-up delay-100" : ""}
@@ -94,12 +110,9 @@ export default function HeroSection() {
             letterSpacing: "-0.5px",
           }}
         >
-          Kori Care:{" "}
-          <span style={{ color: "#7eb3ff" }}>เพื่อนคนเกาหลี</span>
+          <span style={{ color: "#7eb3ff" }}>Kori Care</span> เพื่อนคนเกาหลี
           <br />
-          ที่พร้อมช่วยเหลือคุณ
-          <br />
-          ในทุกเรื่อง
+          ที่พร้อมช่วยเหลือคุณในทุกเรื่อง
         </h1>
 
         {/* Sub-headline */}
@@ -108,19 +121,19 @@ export default function HeroSection() {
           style={{
             opacity: loaded ? 1 : 0,
             fontSize: 15,
-            color: "rgba(255,255,255,0.82)",
+            color: "rgba(255,255,255,0.85)",
             lineHeight: 1.75,
             marginBottom: 36,
             fontWeight: 400,
-            maxWidth: 340,
+            maxWidth: 360,
           }}
         >
-          หากคุณอาศัยอยู่ในเกาหลีและกำลังเผชิญกับความลำบาก
-          ไม่ว่าเรื่องอะไร...{" "}
+          อย่าเผชิญหน้ากับชีวิตในเกาหลีเพียงลำพัง
+          <br />
+          ตั้งแต่เรื่องเล็กๆ ไปจนถึงปัญหากฎหมาย —{" "}
           <span style={{ color: "#a8d4ff", fontWeight: 600 }}>
-            ทักมาคุยกับเราได้เลย
-          </span>{" "}
-          เรายินดีช่วยเหลือคุณในทุกเรื่อง!
+            Kori Care พร้อมอยู่เคียงข้างและร่วมหาทางออกไปกับคุณ
+          </span>
         </p>
 
         {/* CTA Buttons */}
@@ -147,13 +160,15 @@ export default function HeroSection() {
               gap: 10,
               background: "#06C755",
               color: "white",
-              padding: "15px 24px",
+              padding: "14px 24px",
+              border: "1.5px solid transparent",
               borderRadius: 16,
               fontSize: 15,
               fontWeight: 700,
               textDecoration: "none",
               boxShadow: "0 8px 24px rgba(6,199,85,0.4)",
               transition: "all 0.25s ease",
+              boxSizing: "border-box",
             }}
             onTouchStart={(e) => {
               (e.currentTarget as HTMLAnchorElement).style.transform = "scale(0.97)";
@@ -162,10 +177,10 @@ export default function HeroSection() {
               (e.currentTarget as HTMLAnchorElement).style.transform = "scale(1)";
             }}
           >
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="white">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="white" style={{ flexShrink: 0 }}>
               <path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.627-.63h2.386c.349 0 .63.285.63.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.627-.63.349 0 .631.285.631.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.629 0 .344-.281.63-.629.63M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/>
             </svg>
-            คุยกับเพื่อน Kori Care ผ่าน LINE
+            คุยกับเราผ่าน LINE
           </a>
 
           <a
@@ -188,6 +203,7 @@ export default function HeroSection() {
               textDecoration: "none",
               backdropFilter: "blur(8px)",
               transition: "all 0.25s ease",
+              boxSizing: "border-box",
             }}
             onTouchStart={(e) => {
               (e.currentTarget as HTMLAnchorElement).style.transform = "scale(0.97)";
@@ -196,10 +212,10 @@ export default function HeroSection() {
               (e.currentTarget as HTMLAnchorElement).style.transform = "scale(1)";
             }}
           >
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="white">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="white" style={{ flexShrink: 0 }}>
               <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
             </svg>
-            คุยกับเพื่อน Kori Care ผ่าน Messenger
+            คุยกับเราผ่าน Messenger
           </a>
 
           {/* Link Portal CTA Button */}
@@ -221,6 +237,7 @@ export default function HeroSection() {
               textDecoration: "none",
               backdropFilter: "blur(8px)",
               transition: "all 0.25s ease",
+              boxSizing: "border-box",
             }}
             onTouchStart={(e) => {
               (e.currentTarget as HTMLAnchorElement).style.transform = "scale(0.97)";
@@ -229,7 +246,19 @@ export default function HeroSection() {
               (e.currentTarget as HTMLAnchorElement).style.transform = "scale(1)";
             }}
           >
-            🧭 รวมลิงก์ที่ใช้บ่อย · Useful Links
+            <div style={{ width: 20, height: 20, display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
+              <Image
+                src="/koricare_main_logo_nobg.png"
+                alt="Kori Care Link"
+                width={20}
+                height={20}
+                style={{
+                  objectFit: "contain",
+                  filter: "brightness(0) invert(1)",
+                }}
+              />
+            </div>
+            รวมลิงก์ที่ใช้บ่อย · Useful Links
           </a>
         </div>
 

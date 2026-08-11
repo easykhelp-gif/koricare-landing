@@ -1,5 +1,5 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://koricare.kr/sitemap.xml
-Sitemap: https://koricare.kr/link/sitemap.xml
+Sitemap: https://www.koricare.kr/sitemap.xml
+Sitemap: https://www.koricare.kr/link/sitemap.xml

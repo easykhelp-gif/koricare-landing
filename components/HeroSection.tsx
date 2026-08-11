@@ -30,7 +30,7 @@ export default function HeroSection({ lang = "en" }: HeroSectionProps) {
       lineUrl: "https://line.me/R/ti/p/@768mkjml"
     },
     th: {
-      badge: "KORI CARE · เพื่อนคนเกาหลีของคุณ",
+      badge: "BRAVE STEPS, SAFE LIFE.",
       title1: "Kori Care",
       title2: "ค้นหาข้อมูลที่จำเป็น สำหรับชีวิตในเกาหลี",
       sub: "ศูนย์รวมข้อมูลบริการทางการ เบอร์โทรฉุกเฉิน และสถานที่สำคัญสำหรับคนไทยในเกาหลี",
@@ -44,7 +44,7 @@ export default function HeroSection({ lang = "en" }: HeroSectionProps) {
       lineUrl: "https://line.me/R/ti/p/@768mkjml"
     },
     vi: {
-      badge: "KORI CARE · ĐỐI TÁC TIN CẬY TẠI HÀN QUỐC",
+      badge: "BRAVE STEPS, SAFE LIFE.",
       title1: "Kori Care",
       title2: "Cổng thông tin & Tư vấn thiết yếu tại Hàn Quốc",
       sub: "Tổng hợp liên kết dịch vụ chính thức, visa, quyền lao động và tìm kiếm địa điểm cho người Việt tại Hàn Quốc.",
@@ -118,13 +118,14 @@ export default function HeroSection({ lang = "en" }: HeroSectionProps) {
             opacity: loaded ? 1 : 0,
             display: "inline-flex",
             alignItems: "center",
-            background: "rgba(255, 255, 255, 0.14)",
-            border: "1px solid rgba(255, 255, 255, 0.40)",
+            background: "rgba(255, 255, 255, 0.18)",
+            border: "1.5px solid rgba(255, 255, 255, 0.65)",
             borderRadius: 30,
-            padding: "8px 20px",
+            padding: "8px 22px",
             marginBottom: 20,
-            backdropFilter: "blur(12px)",
-            boxShadow: "0 4px 20px rgba(0,0,0,0.2), inset 0 1px 1px rgba(255,255,255,0.4)",
+            backdropFilter: "blur(16px)",
+            WebkitBackdropFilter: "blur(16px)",
+            boxShadow: "0 6px 28px rgba(96, 165, 250, 0.35), inset 0 1px 2px rgba(255, 255, 255, 0.8)",
           }}
         >
           <span
@@ -132,9 +133,9 @@ export default function HeroSection({ lang = "en" }: HeroSectionProps) {
               color: "#ffffff",
               fontSize: 12,
               fontWeight: 900,
-              letterSpacing: "1.5px",
+              letterSpacing: "2.0px",
               textTransform: "uppercase",
-              textShadow: "0 1px 6px rgba(0,0,0,0.5)",
+              textShadow: "0 0 12px rgba(255,255,255,0.9), 0 2px 6px rgba(0,0,0,0.6)",
             }}
           >
             {t.badge}

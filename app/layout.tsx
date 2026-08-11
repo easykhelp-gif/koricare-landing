@@ -2,44 +2,46 @@ import type { Metadata, Viewport } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Kori Care | Essential Life Helper for Foreign Residents in Korea (한국 거주 외국인을 위한 종합 지원)",
-  description: "Official helper portal, severance pay calculator, medical booking & foreigner directory in Korea.",
+  title: "Kori Care | Official Korea Support Portal for Foreign Residents & Workers",
+  description: "Official Kori Care platform providing legal severance pay calculator, visa consultation, medical booking, and foreigner directories in South Korea.",
   keywords: [
-    "Kori Care", "코리케어", "Korea Life Helper", "Foreigner in Korea", "Severance Pay Korea", 
-    "Foreigner Directory", "한국 거주 외국인", "외국인 노동자 상담", "외국인 병원 예약", "1345"
+    "Kori Care", "koricare", "koricare.kr", "코리케어", "KoriCare Korea", 
+    "Korea Foreigner Portal", "Severance Pay Calculator Korea", "Foreign Worker Support Korea", 
+    "HiKorea Visa", "Korean Labor Standards Act"
   ],
   openGraph: {
-    title: "Kori Care | Essential Life Helper for Foreign Residents in Korea",
-    description: "Official helper portal, severance pay calculator, medical booking & foreigner directory in Korea.",
+    title: "Kori Care | Official Korea Support Portal for Foreign Residents",
+    description: "Official Kori Care platform providing legal severance pay calculator, visa consultation, medical booking, and foreigner directories in South Korea.",
     type: "website",
     siteName: "Kori Care",
+    url: "https://www.koricare.kr",
     images: [
       {
-        url: "/koricare_main_logo_nobg.png",
+        url: "https://www.koricare.kr/link/koricare_main_logo_nobg.png",
         width: 512,
         height: 512,
-        alt: "Kori Care Logo",
+        alt: "Kori Care Official Logo",
       }
     ],
   },
   twitter: {
     card: "summary",
-    title: "Kori Care | Essential Life Helper for Foreign Residents in Korea",
-    description: "Official helper portal, severance pay calculator, medical booking & foreigner directory in Korea.",
-    images: ["/koricare_main_logo_nobg.png"],
+    title: "Kori Care | Official Korea Support Portal for Foreign Residents",
+    description: "Official Kori Care platform providing legal severance pay calculator, visa consultation, medical booking, and foreigner directories in South Korea.",
+    images: ["https://www.koricare.kr/link/koricare_main_logo_nobg.png"],
   },
   icons: {
-    icon: "/koricare_main_logo_nobg.png",
-    shortcut: "/koricare_main_logo_nobg.png",
-    apple: "/koricare_main_logo_nobg.png",
+    icon: "https://www.koricare.kr/link/koricare_main_logo_nobg.png",
+    shortcut: "https://www.koricare.kr/link/koricare_main_logo_nobg.png",
+    apple: "https://www.koricare.kr/link/koricare_main_logo_nobg.png",
   },
   alternates: {
     canonical: "https://www.koricare.kr",
     languages: {
-      "th-TH": "https://www.koricare.kr",
-      "ko-KR": "https://www.koricare.kr",
       "en-US": "https://www.koricare.kr",
       "x-default": "https://www.koricare.kr",
+      "th-TH": "https://www.koricare.kr/th",
+      "vi-VN": "https://www.koricare.kr/vi",
     },
   },
 };

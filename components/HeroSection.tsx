@@ -224,7 +224,7 @@ export default function HeroSection() {
           {/* Link Portal CTA Button */}
           <a
             id="hero-portal-btn"
-            href="/link"
+            href="https://www.koricare.kr/link/"
             style={{
               display: "flex",
               alignItems: "center",
@@ -241,15 +241,41 @@ export default function HeroSection() {
               backdropFilter: "blur(8px)",
               transition: "all 0.25s ease",
             }}
-            onTouchStart={(e) => {
-              (e.currentTarget as HTMLAnchorElement).style.transform = "scale(0.97)";
-            }}
-            onTouchEnd={(e) => {
-              (e.currentTarget as HTMLAnchorElement).style.transform = "scale(1)";
+          >
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ flexShrink: 0 }}>
+              <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" />
+              <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" />
+            </svg>
+            Useful Links & Directory
+          </a>
+
+          {/* Severance Pay Calculator One-Click Button */}
+          <a
+            id="hero-calc-btn"
+            href="https://www.koricare.kr/link/severance-calculator"
+            style={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              gap: 10,
+              background: "linear-gradient(135deg, #1e40af 0%, #3b82f6 100%)",
+              color: "white",
+              padding: "14px 24px",
+              borderRadius: 16,
+              fontSize: 15,
+              fontWeight: 700,
+              textDecoration: "none",
+              boxShadow: "0 8px 24px rgba(30,64,175,0.4)",
+              transition: "all 0.25s ease",
             }}
           >
-            <span style={{ fontSize: 18, display: "inline-flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>🔗</span>
-            Useful Links & Directory
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ flexShrink: 0 }}>
+              <rect x="4" y="2" width="16" height="20" rx="2" />
+              <line x1="8" y1="6" x2="16" y2="6" />
+              <line x1="16" y1="14" x2="16" y2="18" />
+              <path d="M8 10h.01M12 10h.01M16 10h.01M8 14h.01M12 14h.01M8 18h.01M12 18h.01" />
+            </svg>
+            Severance Pay Calculator
           </a>
         </div>
 

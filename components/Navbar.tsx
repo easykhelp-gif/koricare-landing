@@ -135,7 +135,7 @@ export default function Navbar({ scrolled }: NavbarProps) {
                 }}
               >
                 <a
-                  href="https://www.koricare.kr/"
+                  href="https://www.koricare.kr/link/"
                   style={{
                     padding: "9px 14px",
                     color: "#ffffff",
@@ -149,7 +149,7 @@ export default function Navbar({ scrolled }: NavbarProps) {
                   English
                 </a>
                 <a
-                  href="https://www.koricare.kr/th"
+                  href="https://www.koricare.kr/link/th/"
                   style={{
                     padding: "9px 14px",
                     color: "rgba(255,255,255,0.9)",
@@ -162,7 +162,7 @@ export default function Navbar({ scrolled }: NavbarProps) {
                   ไทย
                 </a>
                 <a
-                  href="https://www.koricare.kr/vi"
+                  href="https://www.koricare.kr/link/vi/"
                   style={{
                     padding: "9px 14px",
                     color: "rgba(255,255,255,0.9)",

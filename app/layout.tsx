@@ -1,0 +1,91 @@
+import type { Metadata, Viewport } from "next";
+import "./globals.css";
+
+export const metadata: Metadata = {
+  title: "Kori Care | Essential Life Helper for Foreign Residents in Korea (한국 거주 외국인을 위한 종합 지원)",
+  description: "Official helper portal, severance pay calculator, medical booking & foreigner directory in Korea.",
+  keywords: [
+    "Kori Care", "코리케어", "Korea Life Helper", "Foreigner in Korea", "Severance Pay Korea", 
+    "Foreigner Directory", "한국 거주 외국인", "외국인 노동자 상담", "외국인 병원 예약", "1345"
+  ],
+  openGraph: {
+    title: "Kori Care | Essential Life Helper for Foreign Residents in Korea",
+    description: "Official helper portal, severance pay calculator, medical booking & foreigner directory in Korea.",
+    type: "website",
+    siteName: "Kori Care",
+    images: [
+      {
+        url: "/koricare_main_logo_nobg.png",
+        width: 512,
+        height: 512,
+        alt: "Kori Care Logo",
+      }
+    ],
+  },
+  twitter: {
+    card: "summary",
+    title: "Kori Care | Essential Life Helper for Foreign Residents in Korea",
+    description: "Official helper portal, severance pay calculator, medical booking & foreigner directory in Korea.",
+    images: ["/koricare_main_logo_nobg.png"],
+  },
+  icons: {
+    icon: "/koricare_main_logo_nobg.png",
+    shortcut: "/koricare_main_logo_nobg.png",
+    apple: "/koricare_main_logo_nobg.png",
+  },
+  alternates: {
+    canonical: "https://www.koricare.kr",
+    languages: {
+      "th-TH": "https://www.koricare.kr",
+      "ko-KR": "https://www.koricare.kr",
+      "en-US": "https://www.koricare.kr",
+      "x-default": "https://www.koricare.kr",
+    },
+  },
+};
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 1,
+  themeColor: "#002366",
+};
+
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  return (
+    <html lang="th">
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              "name": "Kori Care",
+              "alternateName": ["코리케어", "โครีแคร์"],
+              "url": "https://koricare.kr",
+              "logo": "https://koricare.kr/koricare_main_logo_nobg.png",
+              "sameAs": [
+                "https://m.me/koricare.kr",
+                "https://line.me/R/ti/p/@768mkjml"
+              ],
+              "description": "Your lifestyle helper in Korea.",
+              "contactPoint": {
+                "@type": "ContactPoint",
+                "contactType": "customer support",
+                "availableLanguage": ["Thai", "Korean", "English"]
+              }
+            })
+          }}
+        />
+      </head>
+      <body>{children}</body>
+    </html>
+  );
+}

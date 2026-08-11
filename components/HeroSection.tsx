@@ -71,7 +71,7 @@ export default function HeroSection({ lang = "en" }: HeroSectionProps) {
         flexDirection: "column",
         justifyContent: "center",
         overflow: "hidden",
-        paddingTop: 50,
+        paddingTop: 95,
         paddingBottom: 40,
       }}
     >
@@ -103,7 +103,7 @@ export default function HeroSection({ lang = "en" }: HeroSectionProps) {
           zIndex: 1,
           maxWidth: 480,
           margin: "0 auto",
-          padding: "30px 24px 0",
+          padding: "45px 24px 0",
           width: "100%",
           display: "flex",
           flexDirection: "column",

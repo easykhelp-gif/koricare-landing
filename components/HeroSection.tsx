@@ -141,23 +141,25 @@ export default function HeroSection({ lang = "en" }: HeroSectionProps) {
           </span>
         </div>
 
-        {/* 3D Depth Main Headline */}
+        {/* Deep Glowing Premium 3D Headline */}
         <h1
           className={loaded ? "animate-fade-up delay-100" : ""}
           style={{
             opacity: loaded ? 1 : 0,
-            fontSize: "clamp(28px, 7.5vw, 36px)",
+            fontSize: "clamp(32px, 8.5vw, 42px)",
             fontWeight: 900,
-            lineHeight: 1.25,
+            lineHeight: 1.2,
             marginBottom: 16,
             letterSpacing: "-0.5px",
           }}
         >
           <span
             style={{
-              color: "#60a5fa",
+              background: "linear-gradient(135deg, #ffffff 0%, #bae6fd 40%, #60a5fa 100%)",
+              WebkitBackgroundClip: "text",
+              WebkitTextFillColor: "transparent",
               display: "block",
-              textShadow: "0 2px 10px rgba(96,165,250,0.55), 0 4px 20px rgba(0,0,0,0.6)",
+              filter: "drop-shadow(0 0 24px rgba(96,165,250,0.85)) drop-shadow(0 4px 16px rgba(0,10,40,0.95))",
             }}
           >
             {t.title1}
@@ -166,10 +168,10 @@ export default function HeroSection({ lang = "en" }: HeroSectionProps) {
             style={{
               display: "block",
               color: "#ffffff",
-              fontSize: "0.85em",
+              fontSize: "0.82em",
               fontWeight: 800,
               marginTop: 6,
-              textShadow: "0 2px 12px rgba(0,0,0,0.7), 0 4px 24px rgba(0,0,0,0.5)",
+              textShadow: "0 2px 12px rgba(0,0,0,0.8), 0 4px 24px rgba(0,0,0,0.6)",
             }}
           >
             {t.title2}
@@ -182,18 +184,18 @@ export default function HeroSection({ lang = "en" }: HeroSectionProps) {
           style={{
             opacity: loaded ? 1 : 0,
             fontSize: 14.5,
-            color: "rgba(255,255,255,0.88)",
+            color: "rgba(255,255,255,0.92)",
             lineHeight: 1.7,
             marginBottom: 32,
             fontWeight: 500,
             maxWidth: 360,
-            textShadow: "0 1px 4px rgba(0,0,0,0.5)",
+            textShadow: "0 1px 6px rgba(0,0,0,0.7)",
           }}
         >
           {t.sub}
         </p>
 
-        {/* CTA Buttons in exact priority order: 1. Useful Links -> 2. Calculator -> 3. FB -> 4. LINE */}
+        {/* CTA Buttons in exact priority order: 1. Calculator (TOP) -> 2. Useful Links -> 3. FB -> 4. LINE */}
         <div
           className={loaded ? "animate-fade-up delay-300" : ""}
           style={{
@@ -205,7 +207,36 @@ export default function HeroSection({ lang = "en" }: HeroSectionProps) {
             maxWidth: 320,
           }}
         >
-          {/* 1. Useful Links & Directory Button */}
+          {/* 1. Severance Pay Calculator Button (TOP Priority) */}
+          <a
+            id="hero-calc-btn"
+            href={t.calcUrl}
+            style={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              gap: 10,
+              background: "linear-gradient(135deg, #1d4ed8 0%, #3b82f6 100%)",
+              color: "white",
+              padding: "16px 24px",
+              borderRadius: 16,
+              fontSize: 15.5,
+              fontWeight: 800,
+              textDecoration: "none",
+              boxShadow: "0 8px 24px rgba(29,78,216,0.5), 0 2px 8px rgba(0,0,0,0.3)",
+              transition: "all 0.25s ease",
+            }}
+          >
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" style={{ flexShrink: 0 }}>
+              <rect x="4" y="2" width="16" height="20" rx="2" />
+              <line x1="8" y1="6" x2="16" y2="6" />
+              <line x1="16" y1="14" x2="16" y2="18" />
+              <path d="M8 10h.01M12 10h.01M16 10h.01M8 14h.01M12 14h.01M8 18h.01M12 18h.01" />
+            </svg>
+            {t.calcBtn}
+          </a>
+
+          {/* 2. Useful Links & Directory Button */}
           <a
             id="hero-portal-btn"
             href={t.linksUrl}
@@ -232,35 +263,6 @@ export default function HeroSection({ lang = "en" }: HeroSectionProps) {
               <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" />
             </svg>
             {t.linksBtn}
-          </a>
-
-          {/* 2. Severance Pay Calculator Button */}
-          <a
-            id="hero-calc-btn"
-            href={t.calcUrl}
-            style={{
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              gap: 10,
-              background: "linear-gradient(135deg, #1e40af 0%, #3b82f6 100%)",
-              color: "white",
-              padding: "15px 24px",
-              borderRadius: 16,
-              fontSize: 15,
-              fontWeight: 700,
-              textDecoration: "none",
-              boxShadow: "0 8px 24px rgba(30,64,175,0.4)",
-              transition: "all 0.25s ease",
-            }}
-          >
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" style={{ flexShrink: 0 }}>
-              <rect x="4" y="2" width="16" height="20" rx="2" />
-              <line x1="8" y1="6" x2="16" y2="6" />
-              <line x1="16" y1="14" x2="16" y2="18" />
-              <path d="M8 10h.01M12 10h.01M16 10h.01M8 14h.01M12 14h.01M8 18h.01M12 18h.01" />
-            </svg>
-            {t.calcBtn}
           </a>
 
           {/* 3. Facebook Messenger Button */}

@@ -8,7 +8,7 @@ export default function ServicesSection({ lang = "en" }: ServicesSectionProps) {
   const titlesMap = {
     en: { badge: "WE HELP WITH", title1: "How Kori Care Helps You", title2: "in Every Aspect", sub: "Big or small, feel free to reach out. We are always here for you 😊" },
     th: { badge: "เราพร้อมช่วยเหลือคุณ", title1: "โคริแคร์ดูแลคุณอย่างไร", title2: "ในทุกด้านของการใช้ชีวิต", sub: "ไม่ว่าจะเรื่องเล็กหรือใหญ่ สอบถามได้ตลอดเวลา เราพร้อมอยู่เคียงข้างคุณเสมอ 😊" },
-    vi: { badge: "HỖ TRỢ TOÀN DIỆN", title1: "Kori Care hỗ trợ bạn như thế nào", title2: "trong mọi khía cạnh cuộc sống", sub: "Dù là vấn đề lớn hay nhỏ, hãy liên hệ với chúng tôi. Chúng tôi luôn sẵn sàng giúp đỡ bạn 😊" }
+    vi: { badge: "HỖ TRỢ TOÀN DIỆN", title1: "Kori Care hỗ trợ bạn", title2: "trong mọi khía cạnh cuộc sống", sub: "Dù là vấn đề lớn hay nhỏ, hãy liên hệ với chúng tôi. Chúng tôi luôn sẵn sàng giúp đỡ bạn 😊" }
   };
 
   const servicesMap = {

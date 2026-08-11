@@ -91,7 +91,32 @@ export default function Navbar({ scrolled, currentLang = "en" }: NavbarProps) {
         </div>
 
         <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
-          {/* Glassmorphism Language Selector (High Visibility & Clean Items) */}
+          {/* Contact Us button (Placed to the left of Language selector) */}
+          <a
+            id="nav-cta-btn"
+            href="#contact"
+            style={{
+              display: "flex",
+              alignItems: "center",
+              gap: 6,
+              background: scrolled ? "rgba(0,35,102,0.12)" : "rgba(0,25,80,0.55)",
+              border: scrolled ? "1.5px solid rgba(0,35,102,0.3)" : "1.5px solid rgba(255,255,255,0.7)",
+              color: scrolled ? "#002366" : "#ffffff",
+              padding: "7px 16px",
+              borderRadius: 20,
+              fontSize: 13,
+              fontWeight: 800,
+              textDecoration: "none",
+              backdropFilter: "blur(12px)",
+              boxShadow: scrolled ? "0 2px 8px rgba(0,35,102,0.15)" : "0 4px 14px rgba(0,0,0,0.3)",
+              transition: "all 0.25s ease",
+              whiteSpace: "nowrap",
+            }}
+          >
+            Contact Us
+          </a>
+
+          {/* Glassmorphism Language Selector (Far Right Position) */}
           <div style={{ position: "relative" }}>
             <button
               onClick={() => setLangMenuOpen(!langMenuOpen)}
@@ -122,7 +147,7 @@ export default function Navbar({ scrolled, currentLang = "en" }: NavbarProps) {
               <span style={{ fontSize: 9, opacity: 0.85, marginLeft: 2 }}>▼</span>
             </button>
 
-            {/* Clean Dropdown Menu: NO Globe icons, NO TH/VN prefixes */}
+            {/* Clean Dropdown Menu */}
             {langMenuOpen && (
               <div
                 style={{
@@ -184,31 +209,6 @@ export default function Navbar({ scrolled, currentLang = "en" }: NavbarProps) {
               </div>
             )}
           </div>
-
-          {/* CTA button — matching high-contrast glassmorphism pill */}
-          <a
-            id="nav-cta-btn"
-            href="#contact"
-            style={{
-              display: "flex",
-              alignItems: "center",
-              gap: 6,
-              background: scrolled ? "rgba(0,35,102,0.12)" : "rgba(0,25,80,0.55)",
-              border: scrolled ? "1.5px solid rgba(0,35,102,0.3)" : "1.5px solid rgba(255,255,255,0.7)",
-              color: scrolled ? "#002366" : "#ffffff",
-              padding: "7px 16px",
-              borderRadius: 20,
-              fontSize: 13,
-              fontWeight: 800,
-              textDecoration: "none",
-              backdropFilter: "blur(12px)",
-              boxShadow: scrolled ? "0 2px 8px rgba(0,35,102,0.15)" : "0 4px 14px rgba(0,0,0,0.3)",
-              transition: "all 0.25s ease",
-              whiteSpace: "nowrap",
-            }}
-          >
-            Contact Us
-          </a>
         </div>
       </div>
     </nav>

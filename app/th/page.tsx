@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
+import FloatingButtons from "@/components/FloatingButtons";
 
 export default function ThaiMainPage() {
   const [scrolled, setScrolled] = useState(false);
@@ -170,7 +170,10 @@ export default function ThaiMainPage() {
         </section>
       </main>
 
-      <Footer />
+      <FloatingButtons />
+      <footer style={{ textAlign: "center", padding: "24px 0 40px", color: "#64748b", fontSize: 12 }}>
+        © 2026 Kori Care. All rights reserved.
+      </footer>
     </div>
   );
 }

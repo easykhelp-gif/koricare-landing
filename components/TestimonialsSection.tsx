@@ -1,48 +1,6 @@
 "use client";
 import { useRef, useState } from "react";
 
-const reviews = [
-  {
-    id: "review1",
-    avatar: "🙋‍♂️",
-    text: "When I was ill, I didn't know which hospital to visit or how to prepare documents. The team guided me to the right hospital and explained everything step by step. So comforting!",
-  },
-  {
-    id: "review2",
-    avatar: "🧑‍💻",
-    text: "Korean official documents were so complicated that I kept procrastinating. With Kori Care explaining each line, tasks were completed in no time!",
-  },
-  {
-    id: "review3",
-    avatar: "🙋‍♀️",
-    text: "I was terrified of signing a housing lease contract without reading Korean. The team checked maintenance fees and average neighborhood rates thoroughly. Great relief!",
-  },
-  {
-    id: "review4",
-    avatar: "🙋‍♂️",
-    text: "Overseas money transfer channels and fees were confusing. Got clear advice on the most cost-effective and convenient transfer channel for my family back home.",
-  },
-  {
-    id: "review5",
-    avatar: "🙋‍♀️",
-    text: "Initially asked about ordering cosmetics online, but the team kindly shared vital info on visa extension as well. Whenever I face issues in Korea, I think of Kori Care first!",
-  },
-  {
-    id: "review6",
-    avatar: "🧑‍🔧",
-    text: "Never knew foreign workers had full rights to severance pay (퇴직금). The team coordinated legal procedures step by step and helped protect my rights successfully!",
-  },
-  {
-    id: "review7",
-    avatar: "🧑‍💼",
-    text: "Had severe stress due to unpaid wage disputes with my employer. The team contacted official labor agencies and legal advisors, resolving the dispute peacefully.",
-  },
-  {
-    id: "review8",
-    avatar: "👩‍🎓",
-    text: "Wanted to apply for the KIIP program but was lost for almost a year. Asked Kori Care and received step-by-step registration guidance. Now attending classes smoothly!",
-  },
-  {
     id: "review9",
     avatar: "🙋‍♂️",
     text: "Faced a major issue and didn't know which specialist to consult. The team immediately connected me with official specialists and handled middle communication.",
@@ -144,39 +102,43 @@ export default function TestimonialsSection() {
           style={{
             fontSize: "clamp(20px, 5.5vw, 26px)",
             fontWeight: 800,
-            color: "#1a1f36",
+            color: "#002366",
             lineHeight: 1.3,
             marginBottom: 8,
           }}
         >
-          What Our <span style={{ color: "#002366" }}>Friends Say</span>
+          {currentTitle.title}
         </h2>
         <p style={{ color: "#718096", fontSize: 13.5 }}>
-          Drag or swipe left/right to read real user experiences
+          {currentTitle.sub}
         </p>
       </div>
 
-      {/* 10 Testimonials Slider Container */}
+      {/* Testimonials Slider Container */}
       <div
         ref={sliderRef}
         onMouseDown={handleMouseDown}
         onMouseLeave={handleMouseLeave}
         onMouseUp={handleMouseUp}
         onMouseMove={handleMouseMove}
-        onScroll={handleScroll}
+        onTouchStart={handleTouchStart}
+        onTouchMove={handleTouchMove}
+        onTouchEnd={handleTouchEnd}
         className="reviews-slider reveal"
         style={{
           display: "flex",
-          gap: 16,
+          gap: 12,
           overflowX: "auto",
-          scrollSnapType: isMouseDown ? "none" : "x mandatory",
-          padding: "10px 16px 18px",
-          WebkitOverflowScrolling: "touch",
-          cursor: isMouseDown ? "grabbing" : "grab",
+          scrollBehavior: isDragging ? "auto" : "smooth",
+          paddingBottom: 16,
+          paddingLeft: 4,
+          paddingRight: 4,
+          cursor: isDragging ? "grabbing" : "grab",
           userSelect: "none",
+          WebkitOverflowScrolling: "touch",
         }}
       >
-        {reviews.map((rev) => (
+        {reviewsList.map((rev) => (
           <div
             key={rev.id}
             id={rev.id}

@@ -40,10 +40,10 @@ export default function VietnameseMainPage() {
     <main className="min-h-screen" style={{ background: "var(--soft-white)" }}>
       <Navbar scrolled={scrolled} currentLang="vi" />
       <HeroSection lang="vi" />
-      <TestimonialsSection />
-      <ServicesSection />
-      <HowItWorksSection />
-      <CTASection />
+      <TestimonialsSection lang="vi" />
+      <ServicesSection lang="vi" />
+      <HowItWorksSection lang="vi" />
+      <CTASection lang="vi" />
       <FloatingButtons />
     </main>
   );

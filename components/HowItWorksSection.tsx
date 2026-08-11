@@ -1,30 +1,42 @@
-"use client";
+interface HowItWorksSectionProps {
+  lang?: "en" | "th" | "vi";
+}
 
-const steps = [
-  {
-    id: "step1",
-    num: "01",
-    icon: "💬",
-    title: "Send Us a Message",
-    desc: "Reach out via Messenger or LINE anytime. Describe your situation comfortably in your own language.",
-  },
-  {
-    id: "step2",
-    num: "02",
-    icon: "🤝",
-    title: "Immediate Assistance",
-    desc: "Kori Care takes action right away—acting just like your personal Korean friend to solve issues smoothly.",
-  },
-  {
-    id: "step3",
-    num: "03",
-    icon: "✅",
-    title: "Problem Resolved",
-    desc: "We keep you updated continuously until your inquiry or administrative request is fully completed.",
-  },
-];
+export default function HowItWorksSection({ lang = "en" }: HowItWorksSectionProps) {
+  const map = {
+    en: {
+      badge: "SIMPLE PROCESS",
+      title: "Simple Steps to Get Help",
+      sub: "No complicated procedures. Just tell us what you need.",
+      steps: [
+        { num: "01", icon: "💬", title: "Send Us a Message", desc: "Reach out via Messenger or LINE anytime in your language." },
+        { num: "02", icon: "🤝", title: "Immediate Assistance", desc: "Kori Care takes action right away—acting like your personal Korean friend." },
+        { num: "03", icon: "✅", title: "Problem Resolved", desc: "We keep you updated continuously until your issue is fully completed." }
+      ]
+    },
+    th: {
+      badge: "ขั้นตอนง่ายๆ",
+      title: "3 ขั้นตอนง่ายๆ ในการรับความช่วยเหลือ",
+      sub: "ไม่มีขั้นตอนยุ่งยาก เพียงบอกเราว่าคุณต้องการอะไร",
+      steps: [
+        { num: "01", icon: "💬", title: "ส่งข้อความถึงเรา", desc: "ทักทายเราผ่าน Messenger หรือ LINE ได้ตลอดเวลาด้วยภาษาของคุณเอง" },
+        { num: "02", icon: "🤝", title: "รับความช่วยเหลือทันที", desc: "โคริแคร์ดำเนินการทันที ดุจเพื่อนคนเกาหลีส่วนตัวที่คอยช่วยเหลือคุณ" },
+        { num: "03", icon: "✅", title: "แก้ปัญหาเรียบร้อย", desc: "เราอัปเดตสถานะให้คุณทราบอย่างต่อเนื่องจนกว่าปัญหาของคุณจะได้รับการแก้ไข" }
+      ]
+    },
+    vi: {
+      badge: "QUY TRÌNH ĐƠN GIẢN",
+      title: "3 bước đơn giản để nhận hỗ trợ",
+      sub: "Không thủ tục rườm rà. Chỉ cần cho chúng tôi biết bạn cần gì.",
+      steps: [
+        { num: "01", icon: "💬", title: "Gửi tin nhắn cho chúng tôi", desc: "Liên hệ qua Messenger hoặc LINE bất kỳ lúc nào bằng ngôn ngữ của bạn." },
+        { num: "02", icon: "🤝", title: "Nhận hỗ trợ ngay lập tức", desc: "Kori Care xử lý ngay—như một người bạn Hàn Quốc đồng hành cùng bạn." },
+        { num: "03", icon: "✅", title: "Giải quyết xong vấn đề", desc: "Chúng tôi cập nhật liên tục cho đến khi yêu cầu được hoàn thành." }
+      ]
+    }
+  };
 
-export default function HowItWorksSection() {
+  const data = map[lang];
   return (
     <section
       id="how-it-works"
@@ -77,20 +89,19 @@ export default function HowItWorksSection() {
               marginBottom: 8,
             }}
           >
-            3 Simple Steps <br />
-            to Get Started
+            {data.title}
           </h2>
           <p style={{ color: "#4a5568", fontSize: 13.5, margin: 0 }}>
-            No Korean language skills required. Zero hassle.
+            {data.sub}
           </p>
         </div>
 
         {/* Timeline Steps */}
-        <div style={{ display: "flex", flexDirection: "column", gap: 0 }}>
-          {steps.map((step, idx) => (
-            <div key={step.id} id={step.id} className="reveal" style={{ position: "relative" }}>
+        <div style={{ display: "flex", flexDirection: "column", gap: 20 }}>
+          {data.steps.map((step, idx) => (
+            <div key={idx} className="reveal" style={{ position: "relative" }}>
               {/* Connecting vertical line */}
-              {idx < steps.length - 1 && (
+              {idx < data.steps.length - 1 && (
                 <div
                   style={{
                     position: "absolute",

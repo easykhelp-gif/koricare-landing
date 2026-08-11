@@ -1,7 +1,36 @@
-"use client";
-import Image from "next/image";
+interface CTASectionProps {
+  lang?: "en" | "th" | "vi";
+}
 
-export default function CTASection() {
+export default function CTASection({ lang = "en" }: CTASectionProps) {
+  const ctaMap = {
+    en: {
+      badge: "WE ARE HERE FOR YOU",
+      title: "Ready for a Safe Life in Korea?",
+      sub: "Have questions or need assistance in South Korea? Choose your preferred chat platform below.",
+      calcBtn: "Severance Pay Calculator",
+      fbBtn: "Facebook Messenger",
+      lineBtn: "LINE Chat"
+    },
+    th: {
+      badge: "เราพร้อมอยู่เคียงข้างคุณ",
+      title: "พร้อมสำหรับการใช้ชีวิตในเกาหลีอย่างปลอดภัยหรือยัง?",
+      sub: "มีข้อสงสัยหรือต้องการความช่วยเหลือในเกาหลีใต้? เลือกช่องทางแชตที่คุณสะดวกด้านล่าง",
+      calcBtn: "โปรแกรมคำนวณเงินชดเชย",
+      fbBtn: "Facebook Messenger",
+      lineBtn: "LINE Chat"
+    },
+    vi: {
+      badge: "CHÚNG TÔI LUÔN SẴN SÀNG",
+      title: "Sẵn sàng cho cuộc sống an toàn tại Hàn Quốc?",
+      sub: "Bạn có thắc mắc hoặc cần hỗ trợ tại Hàn Quốc? Chọn nền tảng trò chuyện thuận tiện bên dưới.",
+      calcBtn: "Tính tiền trợ cấp thôi việc",
+      fbBtn: "Facebook Messenger",
+      lineBtn: "LINE Chat"
+    }
+  };
+
+  const t = ctaMap[lang];
   return (
     <section
       id="contact"
@@ -71,13 +100,12 @@ export default function CTASection() {
           style={{
             fontSize: "clamp(20px, 5.5vw, 26px)",
             fontWeight: 800,
-            color: "#1a1f36",
+            color: "#002366",
             lineHeight: 1.35,
             marginBottom: 14,
           }}
         >
-          We Are Here <br />
-          <span style={{ color: "#002366" }}>to Help You</span>
+          {t.title}
         </h2>
 
         <p
@@ -86,17 +114,11 @@ export default function CTASection() {
             color: "#4a5568",
             lineHeight: 1.75,
             marginBottom: 32,
-            maxWidth: 300,
+            maxWidth: 320,
             margin: "0 auto 32px",
           }}
         >
-          Don't handle life challenges in Korea alone.
-          <br />
-          Connect with Kori Care 1:1.
-          <br />
-          <span style={{ color: "#002366", fontWeight: 600 }}>
-            Every day, free consultation.
-          </span>
+          {t.sub}
         </p>
 
         {/* CTA buttons (LINE & Facebook Messenger) */}

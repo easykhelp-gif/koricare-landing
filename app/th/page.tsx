@@ -40,10 +40,10 @@ export default function ThaiMainPage() {
     <main className="min-h-screen" style={{ background: "var(--soft-white)" }}>
       <Navbar scrolled={scrolled} currentLang="th" />
       <HeroSection lang="th" />
-      <TestimonialsSection />
-      <ServicesSection />
-      <HowItWorksSection />
-      <CTASection />
+      <TestimonialsSection lang="th" />
+      <ServicesSection lang="th" />
+      <HowItWorksSection lang="th" />
+      <CTASection lang="th" />
       <FloatingButtons />
     </main>
   );

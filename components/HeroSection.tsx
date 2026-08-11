@@ -30,31 +30,31 @@ export default function HeroSection({ lang = "en" }: HeroSectionProps) {
       lineUrl: "https://line.me/R/ti/p/@768mkjml"
     },
     th: {
-      badge: "เพื่อนคนเกาหลีของคุณ · KORI CARE",
-      title1: "ค้นหาข้อมูลที่จำเป็น",
-      title2: "สำหรับชีวิตในเกาหลี ได้ในที่เดียว",
+      badge: "KORI CARE · เพื่อนคนเกาหลีของคุณ",
+      title1: "Kori Care",
+      title2: "ค้นหาข้อมูลที่จำเป็น สำหรับชีวิตในเกาหลี",
       sub: "ศูนย์รวมข้อมูลบริการทางการ เบอร์โทรฉุกเฉิน และสถานที่สำคัญสำหรับคนไทยในเกาหลี",
-      linksBtn: "ศูนย์รวมลิงก์สำคัญ (Thai Portal)",
+      linksBtn: "ศูนย์รวมลิงก์สำคัญ (Useful Links & Directory)",
       linksUrl: "https://www.koricare.kr/link/th/",
-      calcBtn: "โปรแกรมคำนวณเงินชดเชย (퇴직금)",
+      calcBtn: "โปรแกรมคำนวณเงินชดเชย",
       calcUrl: "https://www.koricare.kr/link/th/severance-calculator",
       fbBtn: "Facebook Messenger",
       fbUrl: "https://m.me/koricare.kr",
-      lineBtn: "LINE Chat (ปรึกษาภาษาไทย)",
+      lineBtn: "LINE Chat",
       lineUrl: "https://line.me/R/ti/p/@768mkjml"
     },
     vi: {
-      badge: "ĐỐI TÁC TIN CẬY TẠI HÀN QUỐC · KORI CARE",
-      title1: "Cổng thông tin & Tư vấn thiết yếu",
-      title2: "cho cuộc sống tại Hàn Quốc",
+      badge: "KORI CARE · ĐỐI TÁC TIN CẬY TẠI HÀN QUỐC",
+      title1: "Kori Care",
+      title2: "Cổng thông tin & Tư vấn thiết yếu tại Hàn Quốc",
       sub: "Tổng hợp liên kết dịch vụ chính thức, visa, quyền lao động và tìm kiếm địa điểm cho người Việt tại Hàn Quốc.",
-      linksBtn: "Cổng liên kết thiết yếu (Vietnamese Portal)",
+      linksBtn: "Cổng liên kết thiết yếu (Useful Links & Directory)",
       linksUrl: "https://www.koricare.kr/link/vi/",
-      calcBtn: "Tính tiền trợ cấp thôi việc (퇴직금)",
+      calcBtn: "Tính tiền trợ cấp thôi việc",
       calcUrl: "https://www.koricare.kr/link/vi/severance-calculator",
       fbBtn: "Facebook Messenger",
       fbUrl: "https://m.me/koricare.kr",
-      lineBtn: "LINE Chat (Tư vấn trực tiếp)",
+      lineBtn: "LINE Chat",
       lineUrl: "https://line.me/R/ti/p/@768mkjml"
     }
   };

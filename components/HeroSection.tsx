@@ -32,8 +32,8 @@ export default function HeroSection({ lang = "en" }: HeroSectionProps) {
     th: {
       badge: "BRAVE STEPS, SAFE LIFE.",
       title1: "Kori Care",
-      title2: "ค้นหาข้อมูลที่จำเป็น สำหรับชีวิตในเกาหลี",
-      sub: "ศูนย์รวมข้อมูลบริการทางการ เบอร์โทรฉุกเฉิน และสถานที่สำคัญสำหรับคนไทยในเกาหลี",
+      title2: "เพื่อนคู่คิดของคุณในเกาหลี",
+      sub: "พอร์ทัลรวมลิงก์สำคัญและบริการช่วยเหลือ 1:1 สำหรับชาวต่างชาติในเกาหลี",
       linksBtn: "ศูนย์รวมลิงก์สำคัญ",
       linksUrl: "https://www.koricare.kr/link/th/",
       calcBtn: "โปรแกรมคำนวณเงินชดเชย",
@@ -46,8 +46,8 @@ export default function HeroSection({ lang = "en" }: HeroSectionProps) {
     vi: {
       badge: "BRAVE STEPS, SAFE LIFE.",
       title1: "Kori Care",
-      title2: "Cổng thông tin & Tư vấn thiết yếu tại Hàn Quốc",
-      sub: "Tổng hợp liên kết dịch vụ chính thức, visa, quyền lao động và tìm kiếm địa điểm cho người Việt tại Hàn Quốc.",
+      title2: "Đối tác đồng hành tại Hàn Quốc",
+      sub: "Cổng thông tin thiết yếu & Hỗ trợ 1:1 cho người nước ngoài tại Hàn Quốc.",
       linksBtn: "Cổng liên kết thiết yếu",
       linksUrl: "https://www.koricare.kr/link/vi/",
       calcBtn: "Tính tiền trợ cấp thôi việc",

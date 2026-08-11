@@ -4,10 +4,17 @@ import Image from "next/image";
 
 interface NavbarProps {
   scrolled: boolean;
+  currentLang?: "en" | "th" | "vi";
 }
 
-export default function Navbar({ scrolled }: NavbarProps) {
+export default function Navbar({ scrolled, currentLang = "en" }: NavbarProps) {
   const [langMenuOpen, setLangMenuOpen] = useState(false);
+
+  const langLabels = {
+    en: "English",
+    th: "ภาษาไทย",
+    vi: "Tiếng Việt"
+  };
 
   return (
     <nav
@@ -111,7 +118,7 @@ export default function Navbar({ scrolled }: NavbarProps) {
                 <line x1="2" y1="12" x2="22" y2="12" />
                 <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
               </svg>
-              <span>English</span>
+              <span>{langLabels[currentLang]}</span>
               <span style={{ fontSize: 9, opacity: 0.85, marginLeft: 2 }}>▼</span>
             </button>
 

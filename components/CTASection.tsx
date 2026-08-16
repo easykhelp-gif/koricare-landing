@@ -34,6 +34,7 @@ export default function CTASection({ lang = "en" }: CTASectionProps) {
   return (
     <section
       id="contact"
+      className="scene-3d"
       style={{
         padding: "0 20px 120px",
         maxWidth: 480,
@@ -41,7 +42,7 @@ export default function CTASection({ lang = "en" }: CTASectionProps) {
       }}
     >
       <div
-        className="reveal"
+        className="reveal depth-3d surface-3d"
         style={{
           background: "linear-gradient(160deg, #f8f9ff 0%, #edf2ff 50%, #e8f0ff 100%)",
           borderRadius: 28,
@@ -128,7 +129,7 @@ export default function CTASection({ lang = "en" }: CTASectionProps) {
             href="https://line.me/R/ti/p/@768mkjml"
             target="_blank"
             rel="noopener noreferrer"
-            className="btn-shimmer"
+            className="btn-shimmer btn-3d"
             style={{
               display: "flex",
               alignItems: "center",
@@ -161,6 +162,7 @@ export default function CTASection({ lang = "en" }: CTASectionProps) {
             href="https://m.me/koricare.kr"
             target="_blank"
             rel="noopener noreferrer"
+            className="btn-3d"
             style={{
               display: "flex",
               alignItems: "center",

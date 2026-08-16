@@ -40,6 +40,7 @@ export default function HowItWorksSection({ lang = "en" }: HowItWorksSectionProp
   return (
     <section
       id="how-it-works"
+      className="scene-3d"
       style={{
         padding: "20px 20px 60px",
         maxWidth: 480,
@@ -99,7 +100,7 @@ export default function HowItWorksSection({ lang = "en" }: HowItWorksSectionProp
         {/* Timeline Steps */}
         <div style={{ display: "flex", flexDirection: "column", gap: 20 }}>
           {data.steps.map((step, idx) => (
-            <div key={idx} className="reveal" style={{ position: "relative" }}>
+            <div key={idx} className="reveal depth-3d" style={{ position: "relative", transformStyle: "preserve-3d" }}>
               {/* Connecting vertical line */}
               {idx < data.steps.length - 1 && (
                 <div
@@ -124,6 +125,7 @@ export default function HowItWorksSection({ lang = "en" }: HowItWorksSectionProp
                 }}
               >
                 <div
+                  className="lift-md"
                   style={{
                     width: 52,
                     height: 52,
@@ -133,7 +135,8 @@ export default function HowItWorksSection({ lang = "en" }: HowItWorksSectionProp
                     alignItems: "center",
                     justifyContent: "center",
                     flexShrink: 0,
-                    boxShadow: "0 4px 16px rgba(0,35,102,0.3)",
+                    boxShadow:
+                      "0 10px 24px rgba(0,35,102,0.38), 0 3px 6px rgba(0,35,102,0.28), inset 0 1px 1px rgba(255,255,255,0.35)",
                     position: "relative",
                     zIndex: 1,
                   }}
@@ -142,12 +145,12 @@ export default function HowItWorksSection({ lang = "en" }: HowItWorksSectionProp
                 </div>
 
                 <div
+                  className="surface-3d"
                   style={{
                     background: "white",
                     borderRadius: 16,
                     padding: "14px 16px",
                     flex: 1,
-                    boxShadow: "0 2px 12px rgba(0,35,102,0.06)",
                   }}
                 >
                   <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 6 }}>

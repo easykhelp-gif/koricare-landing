@@ -78,7 +78,7 @@ export default function TestimonialsSection({ lang = "en" }: TestimonialsSection
   };
 
   return (
-    <section id="testimonials" style={{ padding: "40px 20px 20px", maxWidth: 480, margin: "0 auto" }}>
+    <section id="testimonials" className="scene-3d" style={{ padding: "40px 20px 20px", maxWidth: 480, margin: "0 auto" }}>
       {/* Header */}
       <div className="reveal" style={{ textAlign: "center", marginBottom: 20 }}>
         <h2 style={{ fontSize: "clamp(20px, 5.5vw, 26px)", fontWeight: 800, color: "#002366", lineHeight: 1.3, marginBottom: 8 }}>
@@ -96,11 +96,12 @@ export default function TestimonialsSection({ lang = "en" }: TestimonialsSection
         onMouseLeave={handleMouseLeave}
         onMouseUp={handleMouseUp}
         onMouseMove={handleMouseMove}
+        className="carousel-3d"
         style={{
           display: "flex",
           gap: 14,
           overflowX: "auto",
-          padding: "10px 4px 18px",
+          padding: "26px 4px 34px",
           WebkitOverflowScrolling: "touch",
           cursor: isMouseDown ? "grabbing" : "grab",
           userSelect: "none",
@@ -109,12 +110,12 @@ export default function TestimonialsSection({ lang = "en" }: TestimonialsSection
         {reviewsList.map((rev) => (
           <div
             key={rev.id}
+            className="carousel-3d-item surface-3d"
             style={{
               flex: "0 0 280px",
               background: "#ffffff",
               borderRadius: 20,
               padding: 20,
-              boxShadow: "0 4px 20px rgba(0,35,102,0.06)",
               border: "1px solid rgba(0,35,102,0.08)",
               display: "flex",
               flexDirection: "column",

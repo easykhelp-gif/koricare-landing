@@ -1,6 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
-import Image from "next/image";
+import Hero3DBackground from "./Hero3DBackground";
 
 interface HeroSectionProps {
   lang?: "en" | "th" | "vi";
@@ -75,29 +75,12 @@ export default function HeroSection({ lang = "en" }: HeroSectionProps) {
         paddingBottom: 40,
       }}
     >
-      {/* Background — uploaded brand background image */}
-      <div style={{ position: "absolute", inset: 0, zIndex: 0, overflow: "hidden" }}>
-        <Image
-          src="/wave-bg.jpg"
-          alt="Kori Care brand background"
-          fill
-          priority
-          style={{ objectFit: "cover", objectPosition: "center" }}
-          quality={90}
-        />
-        {/* Dark overlay for text legibility */}
-        <div
-          style={{
-            position: "absolute",
-            inset: 0,
-            background:
-              "linear-gradient(180deg, rgba(0,20,80,0.25) 0%, rgba(0,15,60,0.55) 50%, rgba(0,8,35,0.90) 100%)",
-          }}
-        />
-      </div>
+      {/* Background — WebGL wave scene, with static fallback for low-power devices */}
+      <Hero3DBackground />
 
       {/* Content */}
       <div
+        className="hero-stage"
         style={{
           position: "relative",
           zIndex: 1,
@@ -211,6 +194,7 @@ export default function HeroSection({ lang = "en" }: HeroSectionProps) {
           {/* 1. Severance Pay Calculator Button (TOP Priority) */}
           <a
             id="hero-calc-btn"
+            className="btn-3d"
             href={t.calcUrl}
             style={{
               display: "flex",
@@ -240,6 +224,7 @@ export default function HeroSection({ lang = "en" }: HeroSectionProps) {
           {/* 2. Useful Links & Directory Button */}
           <a
             id="hero-portal-btn"
+            className="btn-3d"
             href={t.linksUrl}
             style={{
               display: "flex",
@@ -269,6 +254,7 @@ export default function HeroSection({ lang = "en" }: HeroSectionProps) {
           {/* 3. Facebook Messenger Button */}
           <a
             id="hero-fb-btn"
+            className="btn-3d"
             href={t.fbUrl}
             target="_blank"
             rel="noopener noreferrer"
@@ -298,6 +284,7 @@ export default function HeroSection({ lang = "en" }: HeroSectionProps) {
           {/* 4. LINE Chat Button */}
           <a
             id="hero-line-btn"
+            className="btn-3d"
             href={t.lineUrl}
             target="_blank"
             rel="noopener noreferrer"

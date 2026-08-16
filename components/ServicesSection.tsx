@@ -36,7 +36,7 @@ export default function ServicesSection({ lang = "en" }: ServicesSectionProps) {
   const list = servicesMap[lang];
 
   return (
-    <section id="services" style={{ padding: "40px 20px 60px", maxWidth: 480, margin: "0 auto" }}>
+    <section id="services" className="scene-3d" style={{ padding: "40px 20px 60px", maxWidth: 480, margin: "0 auto" }}>
       <div className="reveal" style={{ textAlign: "center", marginBottom: 32 }}>
         <div style={{ display: "inline-block", background: "rgba(0,35,102,0.06)", border: "1px solid rgba(0,35,102,0.12)", padding: "5px 14px", borderRadius: 20, marginBottom: 12 }}>
           <span style={{ color: "#002366", fontSize: 11.5, fontWeight: 900, letterSpacing: "1px" }}>{t.badge}</span>
@@ -50,8 +50,8 @@ export default function ServicesSection({ lang = "en" }: ServicesSectionProps) {
 
       <div style={{ display: "flex", flexDirection: "column", gap: 14 }}>
         {list.map((item) => (
-          <div key={item.id} className="reveal" style={{ background: "white", borderRadius: 20, padding: "20px", display: "flex", gap: 16, alignItems: "flex-start", boxShadow: "0 4px 20px rgba(0,35,102,0.07)", border: "1px solid rgba(0,35,102,0.06)" }}>
-            <div style={{ width: 52, height: 52, borderRadius: 14, background: item.iconBg, display: "flex", alignItems: "center", justifyContent: "center", fontSize: 24, flexShrink: 0, boxShadow: "0 4px 12px rgba(0,0,0,0.15)" }}>
+          <div key={item.id} className="reveal depth-3d surface-3d" style={{ background: "white", borderRadius: 20, padding: "20px", display: "flex", gap: 16, alignItems: "flex-start", border: "1px solid rgba(0,35,102,0.06)" }}>
+            <div className="lift-sm" style={{ width: 52, height: 52, borderRadius: 14, background: item.iconBg, display: "flex", alignItems: "center", justifyContent: "center", fontSize: 24, flexShrink: 0, boxShadow: "0 6px 16px rgba(0,0,0,0.22), 0 2px 4px rgba(0,0,0,0.12)" }}>
               <span style={{ display: "flex", alignItems: "center", justifyContent: "center", width: "100%", height: "100%" }}>{item.emoji}</span>
             </div>
             <div style={{ flex: 1, minWidth: 0 }}>

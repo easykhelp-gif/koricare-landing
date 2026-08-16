@@ -16,8 +16,9 @@ const vertexShader = /* glsl */ `
     vec3 p = position;
 
     // Drift upward and wrap, entirely on the GPU — no per-frame CPU array writes.
-    float half = uSpan * 0.5;
-    p.y = mod(p.y + uTime * aSpeed + half, uSpan) - half;
+    // NB: "half" is a reserved word in GLSL, hence halfSpan.
+    float halfSpan = uSpan * 0.5;
+    p.y = mod(p.y + uTime * aSpeed + halfSpan, uSpan) - halfSpan;
     p.x += sin(uTime * 0.22 + aPhase) * 0.45;
 
     vec4 mv = modelViewMatrix * vec4(p, 1.0);
@@ -25,7 +26,7 @@ const vertexShader = /* glsl */ `
     gl_PointSize = uSize * aScale * (60.0 / max(-mv.z, 0.1));
 
     // Fade in/out at the top and bottom of the wrap range.
-    vAlpha = smoothstep(1.0, 0.0, abs(p.y) / half);
+    vAlpha = smoothstep(1.0, 0.0, abs(p.y) / halfSpan);
   }
 `;
 
@@ -47,7 +48,7 @@ interface MotesProps {
   count: number;
 }
 
-const SPAN = 15;
+const SPAN = 26;
 
 export default function Motes({ count }: MotesProps) {
   const materialRef = useRef<THREE.ShaderMaterial>(null);
@@ -59,11 +60,11 @@ export default function Motes({ count }: MotesProps) {
     const ph = new Float32Array(count);
 
     for (let i = 0; i < count; i++) {
-      pos[i * 3] = (Math.random() - 0.5) * 18;
+      pos[i * 3] = (Math.random() - 0.5) * 64;
       pos[i * 3 + 1] = (Math.random() - 0.5) * SPAN;
-      pos[i * 3 + 2] = (Math.random() - 0.5) * 12 - 2;
-      sc[i] = 0.35 + Math.random() * 1.15;
-      sp[i] = 0.12 + Math.random() * 0.38;
+      pos[i * 3 + 2] = (Math.random() - 0.5) * 44;
+      sc[i] = 0.3 + Math.random() * 1.0;
+      sp[i] = 0.08 + Math.random() * 0.22;
       ph[i] = Math.random() * Math.PI * 2;
     }
     return [pos, sc, sp, ph];
@@ -72,9 +73,9 @@ export default function Motes({ count }: MotesProps) {
   const uniforms = useMemo(
     () => ({
       uTime: { value: 0 },
-      uSize: { value: 2.6 },
+      uSize: { value: 2.2 },
       uSpan: { value: SPAN },
-      uColor: { value: new THREE.Color("#bfe3ff") },
+      uColor: { value: new THREE.Color("#cfe6ff") },
     }),
     []
   );
@@ -86,7 +87,8 @@ export default function Motes({ count }: MotesProps) {
   });
 
   return (
-    <points>
+    // Sits above and behind the skyline — city haze, not foreground dust.
+    <points position={[0, 13, -20]}>
       <bufferGeometry>
         <bufferAttribute
           attach="attributes-position"

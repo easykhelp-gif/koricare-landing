@@ -1,13 +1,17 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
 import { Canvas, useFrame, useThree } from "@react-three/fiber";
-import WaveGrid from "./WaveGrid";
+import Buildings from "./Buildings";
+import Landmarks from "./Landmarks";
 import Motes from "./Motes";
 import type { SceneQuality } from "./useSceneQuality";
 
+const BASE = { x: 0, y: 9, z: 22 };
+
 /**
- * Eases the camera toward the pointer (desktop) or the page scroll (touch),
- * which is what sells the depth of the scene without any user input cost.
+ * Eases the camera over the skyline — pointer on desktop, scroll on touch.
+ * Scrolling descends toward street level, which hands the hero off to the
+ * sections below instead of the city just sliding away.
  */
 function CameraRig() {
   const { camera, pointer } = useThree();
@@ -15,7 +19,7 @@ function CameraRig() {
 
   useEffect(() => {
     const onScroll = () => {
-      scrollRef.current = Math.min(window.scrollY / 600, 1);
+      scrollRef.current = Math.min(window.scrollY / 700, 1);
     };
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
@@ -23,14 +27,17 @@ function CameraRig() {
   }, []);
 
   useFrame((_, delta) => {
-    const targetX = pointer.x * 0.85;
-    const targetY = 0.6 + pointer.y * 0.45 - scrollRef.current * 1.1;
+    const s = scrollRef.current;
+    const targetX = BASE.x + pointer.x * 2.2;
+    const targetY = BASE.y + pointer.y * 1.1 - s * 3.2;
+    const targetZ = BASE.z - s * 5.5;
 
     // Frame-rate independent easing so 60Hz and 120Hz phones feel the same.
-    const k = 1 - Math.pow(0.001, delta);
+    const k = 1 - Math.pow(0.0015, delta);
     camera.position.x += (targetX - camera.position.x) * k;
     camera.position.y += (targetY - camera.position.y) * k;
-    camera.lookAt(0, -0.6, 0);
+    camera.position.z += (targetZ - camera.position.z) * k;
+    camera.lookAt(0, 6.5, -28);
   });
 
   return null;
@@ -75,22 +82,24 @@ export default function HeroCanvas({ quality }: HeroCanvasProps) {
       <Canvas
         frameloop={active ? "always" : "never"}
         dpr={isLow ? 1 : [1, 1.6]}
-        camera={{ position: [0, 0.6, 7.5], fov: 55, near: 0.1, far: 60 }}
+        camera={{
+          position: [BASE.x, BASE.y, BASE.z],
+          fov: 52,
+          near: 0.5,
+          far: 220,
+        }}
         gl={{
           antialias: !isLow,
           alpha: true,
           powerPreference: "high-performance",
           stencil: false,
-          depth: true,
         }}
         style={{ pointerEvents: "none" }}
       >
         <CameraRig />
-        <WaveGrid
-          segments={isLow ? 56 : 96}
-          opacity={isLow ? 0.62 : 0.75}
-        />
-        <Motes count={isLow ? 170 : 420} />
+        <Buildings count={isLow ? 150 : 260} />
+        <Landmarks />
+        <Motes count={isLow ? 90 : 200} />
       </Canvas>
     </div>
   );

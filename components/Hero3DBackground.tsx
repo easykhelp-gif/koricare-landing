@@ -1,54 +1,45 @@
 "use client";
 import dynamic from "next/dynamic";
-import Image from "next/image";
+import StaticSkyline from "./StaticSkyline";
 import useSceneQuality from "./three/useSceneQuality";
 
 // three.js + fiber never reach the server bundle and never block first paint.
 const HeroCanvas = dynamic(() => import("./three/HeroCanvas"), { ssr: false });
 
 /**
- * Hero backdrop in three layers:
- *   1. a CSS gradient that paints instantly (no network, safe LCP),
- *   2. the WebGL wave scene when the device can afford it,
- *   3. the original brand photo when it cannot,
- *   4. a legibility scrim over everything.
+ * Seoul at night, in three layers:
+ *   1. a night-sky gradient with the city's glow on the horizon — pure CSS,
+ *      so it paints instantly and carries the look on its own,
+ *   2. the WebGL skyline when the device can afford it, otherwise an inline
+ *      SVG skyline with the same composition,
+ *   3. a scrim that keeps the headline and CTAs readable over either.
  */
 export default function Hero3DBackground() {
   const quality = useSceneQuality();
 
   return (
     <div style={{ position: "absolute", inset: 0, zIndex: 0, overflow: "hidden" }}>
-      {/* 1. Instant gradient base */}
+      {/* 1. Night sky — light pollution rising off the skyline */}
       <div
         style={{
           position: "absolute",
           inset: 0,
           background:
-            "radial-gradient(120% 90% at 50% 8%, #0b3fa8 0%, #002366 42%, #001233 78%, #000a1f 100%)",
+            "radial-gradient(135% 78% at 50% 76%, #1d5296 0%, #0d3070 26%, #051845 54%, #020c26 78%, #01060f 100%)",
         }}
       />
 
-      {/* 2 / 3. 3D scene, or the original photo on constrained devices */}
-      {quality === "off" && (
-        <Image
-          src="/wave-bg.jpg"
-          alt=""
-          aria-hidden="true"
-          fill
-          sizes="100vw"
-          style={{ objectFit: "cover", objectPosition: "center", opacity: 0.85 }}
-          quality={70}
-        />
-      )}
+      {/* 2. The city */}
+      {quality === "off" && <StaticSkyline />}
       {quality && quality !== "off" && <HeroCanvas quality={quality} />}
 
-      {/* 4. Scrim — keeps the headline and CTAs readable over either backdrop */}
+      {/* 3. Legibility scrim */}
       <div
         style={{
           position: "absolute",
           inset: 0,
           background:
-            "linear-gradient(180deg, rgba(0,12,45,0.55) 0%, rgba(0,10,40,0.30) 38%, rgba(0,8,35,0.72) 82%, rgba(0,6,28,0.94) 100%)",
+            "linear-gradient(180deg, rgba(1,8,26,0.72) 0%, rgba(2,12,34,0.34) 34%, rgba(2,10,30,0.30) 62%, rgba(1,7,22,0.78) 88%, rgba(1,5,16,0.95) 100%)",
         }}
       />
     </div>

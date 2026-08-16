@@ -1,6 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
-import Hero3DBackground from "./Hero3DBackground";
+import HeroVideoBackground from "./HeroVideoBackground";
 
 interface HeroSectionProps {
   lang?: "en" | "th" | "vi";
@@ -75,8 +75,8 @@ export default function HeroSection({ lang = "en" }: HeroSectionProps) {
         paddingBottom: 40,
       }}
     >
-      {/* Background — WebGL wave scene, with static fallback for low-power devices */}
-      <Hero3DBackground />
+      {/* Background — Seoul night footage, graded in CSS, still on low-power devices */}
+      <HeroVideoBackground />
 
       {/* Content */}
       <div

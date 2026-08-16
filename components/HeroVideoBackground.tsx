@@ -3,8 +3,12 @@ import { useEffect, useRef, useState } from "react";
 import useSceneQuality from "./three/useSceneQuality";
 
 const POSTER = "/seoul-night-poster.webp";
+
+// H.264 only, deliberately. VP9 came out just 18% smaller at a quality the
+// contrast grade turns into visible banding, and cheap Android phones decode
+// H.264 in hardware while frequently falling back to software for VP9 — worse
+// battery for the audience this site is built for.
 const VIDEO_MP4 = "/seoul-night.mp4";
-const VIDEO_WEBM = "/seoul-night.webm";
 
 /**
  * Seoul at night behind the hero.
@@ -96,7 +100,6 @@ export default function HeroVideoBackground() {
               display: "block",
             }}
           >
-            <source src={VIDEO_WEBM} type="video/webm" />
             <source src={VIDEO_MP4} type="video/mp4" />
           </video>
         ) : (

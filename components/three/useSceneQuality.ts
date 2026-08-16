@@ -48,10 +48,7 @@ export default function useSceneQuality(): SceneQuality | null {
     if (
       reducedMotion ||
       saveData ||
-      slowNetwork ||
-      cores <= 3 ||
-      memory <= 2 ||
-      !detectWebGL()
+      slowNetwork
     ) {
       setQuality("off");
       return;

@@ -225,6 +225,7 @@ body {
 .hero-stage {
   perspective: 900px;
   transform-style: preserve-3d;
+  transform: translateZ(1px); /* Fix iOS Safari z-index bug with preserve-3d */
 }
 
 /* Card surface with a stacked shadow ramp — the single biggest cue for

@@ -104,6 +104,10 @@ function MountainRidge() {
 /** N Seoul Tower on Namsan — the silhouette the city is recognised by. */
 function NamsanTower() {
   const structure = useSilhouetteMaterial(12, 0.016);
+  const beaconColor = useMemo(
+    () => new THREE.Color(CITY_COLORS.beacon).multiplyScalar(5),
+    []
+  );
   const beaconRef = useRef<THREE.Mesh>(null);
   const ringRef = useRef<THREE.MeshBasicMaterial>(null);
 
@@ -116,7 +120,7 @@ function NamsanTower() {
     }
     if (ringRef.current) {
       // Namsan's deck is floodlit in slowly cycling colours at night.
-      ringRef.current.color.setHSL((t * 0.035) % 1, 0.62, 0.62);
+      ringRef.current.color.setHSL((t * 0.035) % 1, 0.62, 0.62).multiplyScalar(3.2);
     }
   });
 
@@ -140,7 +144,7 @@ function NamsanTower() {
       {/* Lit deck ring */}
       <mesh position={[0, 9.3, 0]}>
         <cylinderGeometry args={[0.7, 0.7, 0.42, 12]} />
-        <meshBasicMaterial ref={ringRef} color="#7ad0ff" toneMapped={false} />
+        <meshBasicMaterial ref={ringRef} toneMapped={false} />
       </mesh>
 
       {/* Taper back in above the deck */}
@@ -155,7 +159,7 @@ function NamsanTower() {
 
       <mesh ref={beaconRef} position={[0, 12.75, 0]}>
         <sphereGeometry args={[0.12, 8, 8]} />
-        <meshBasicMaterial color={CITY_COLORS.beacon} toneMapped={false} />
+        <meshBasicMaterial color={beaconColor} toneMapped={false} />
       </mesh>
     </group>
   );
@@ -164,6 +168,14 @@ function NamsanTower() {
 /** The tapered supertall that anchors the modern half of the skyline. */
 function SignatureTower() {
   const structure = useSilhouetteMaterial(26, 0.016);
+  const beaconColor = useMemo(
+    () => new THREE.Color(CITY_COLORS.beacon).multiplyScalar(5),
+    []
+  );
+  const crownColor = useMemo(
+    () => new THREE.Color("#bfe3ff").multiplyScalar(3.4),
+    []
+  );
   const crownRef = useRef<THREE.Mesh>(null);
 
   useFrame((state) => {
@@ -181,11 +193,11 @@ function SignatureTower() {
       {/* Lantern crown */}
       <mesh position={[0, 21.6, 0]}>
         <cylinderGeometry args={[0.1, 0.42, 1.5, 4]} />
-        <meshBasicMaterial color="#bfe3ff" toneMapped={false} />
+        <meshBasicMaterial color={crownColor} toneMapped={false} />
       </mesh>
       <mesh ref={crownRef} position={[0, 22.6, 0]}>
         <sphereGeometry args={[0.16, 8, 8]} />
-        <meshBasicMaterial color={CITY_COLORS.beacon} toneMapped={false} />
+        <meshBasicMaterial color={beaconColor} toneMapped={false} />
       </mesh>
     </group>
   );

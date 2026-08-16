@@ -21,9 +21,12 @@ export const fogGlsl = /* glsl */ `
   uniform vec3 uFogColor;
   uniform float uFogDensity;
 
+  float fogAmount(float depth) {
+    return clamp(1.0 - exp(-pow(max(depth, 0.0) * uFogDensity, 2.0)), 0.0, 1.0);
+  }
+
   vec3 applyFog(vec3 col, float depth) {
-    float amt = 1.0 - exp(-pow(max(depth, 0.0) * uFogDensity, 2.0));
-    return mix(col, uFogColor, clamp(amt, 0.0, 1.0));
+    return mix(col, uFogColor, fogAmount(depth));
   }
 `;
 

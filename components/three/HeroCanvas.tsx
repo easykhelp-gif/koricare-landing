@@ -1,16 +1,20 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
 import { Canvas, useFrame, useThree } from "@react-three/fiber";
+import Apartments from "./Apartments";
 import Buildings from "./Buildings";
 import Landmarks from "./Landmarks";
 import Motes from "./Motes";
+import PostFX from "./PostFX";
+import RiverFront from "./RiverFront";
+import SkyDome from "./SkyDome";
 import type { SceneQuality } from "./useSceneQuality";
 
 const BASE = { x: 0, y: 9, z: 22 };
 
 /**
  * Eases the camera over the skyline — pointer on desktop, scroll on touch.
- * Scrolling descends toward street level, which hands the hero off to the
+ * Scrolling descends toward the water, which hands the hero off to the
  * sections below instead of the city just sliding away.
  */
 function CameraRig() {
@@ -89,17 +93,23 @@ export default function HeroCanvas({ quality }: HeroCanvasProps) {
           far: 220,
         }}
         gl={{
-          antialias: !isLow,
-          alpha: true,
+          // The sky is drawn in-scene now, so the canvas can be opaque.
+          alpha: false,
+          // Bloom does the smoothing MSAA would, at a fraction of the cost.
+          antialias: false,
           powerPreference: "high-performance",
           stencil: false,
         }}
         style={{ pointerEvents: "none" }}
       >
         <CameraRig />
+        <SkyDome />
         <Buildings count={isLow ? 150 : 260} />
+        <Apartments complexes={isLow ? 5 : 8} />
+        <RiverFront />
         <Landmarks />
-        <Motes count={isLow ? 90 : 200} />
+        <Motes count={isLow ? 70 : 160} />
+        <PostFX low={isLow} bloom={isLow ? 0.5 : 0.58} exposure={0.85} />
       </Canvas>
     </div>
   );

@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import "../globals.css";
+import GoogleAnalytics from "../../components/GoogleAnalytics";
 
 export const metadata: Metadata = {
   title: "Kori Care | คู่มือช่วยเหลือการใช้ชีวิตในเกาหลี (Life Helper Portal / โคริแคร์)",
@@ -74,7 +75,10 @@ export default function ThaiLayout({ children }: { children: React.ReactNode }) 
           }}
         />
       </head>
-      <body>{children}</body>
+      <body>
+        <GoogleAnalytics />
+        {children}
+      </body>
     </html>
   );
 }

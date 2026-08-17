@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import "../globals.css";
+import GoogleAnalytics from "../../components/GoogleAnalytics";
 
 export const metadata: Metadata = {
   title: "Kori Care | Official Korea Support Portal for Foreign Residents & Workers",
@@ -87,7 +88,10 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body>{children}</body>
+      <body>
+        <GoogleAnalytics />
+        {children}
+      </body>
     </html>
   );
 }

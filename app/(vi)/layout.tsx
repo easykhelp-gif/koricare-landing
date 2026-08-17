@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import "../globals.css";
+import GoogleAnalytics from "../../components/GoogleAnalytics";
 
 export const metadata: Metadata = {
   title: "Kori Care | Cổng thông tin hỗ trợ đời sống tại Hàn Quốc (Tiếng Việt)",
@@ -74,7 +75,10 @@ export default function VietnameseLayout({ children }: { children: React.ReactNo
           }}
         />
       </head>
-      <body>{children}</body>
+      <body>
+        <GoogleAnalytics />
+        {children}
+      </body>
     </html>
   );
 }

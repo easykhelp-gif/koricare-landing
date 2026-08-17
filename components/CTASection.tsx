@@ -204,6 +204,20 @@ export default function CTASection({ lang = "en" }: CTASectionProps) {
           >
             🔒 Your information is confidential · Free consultation
           </p>
+
+          {/* The brand's Korean and Thai names only existed in meta tags and
+              JSON-LD, which meant a Korean-language search for 코리케어 had no
+              visible text to match against. */}
+          <p
+            style={{
+              fontSize: 11.5,
+              color: "#a0aec0",
+              lineHeight: 1.6,
+              margin: "8px 0 0",
+            }}
+          >
+            Kori Care · 코리케어 · โครีแคร์
+          </p>
           <a
             href="https://docs.google.com/document/d/e/2PACX-1vQIjmBDUa6lTRNLATBxdh7Haa3BOYAjX8F66nfSLMvfXW4dXRJuT-MW4HwonfigVfaP_c4ZgqpvgPyz/pub"
             target="_blank"

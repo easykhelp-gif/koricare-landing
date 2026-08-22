@@ -206,6 +206,32 @@ export default function Navbar({ scrolled, currentLang = "en" }: NavbarProps) {
                 >
                   Tiếng Việt
                 </a>
+
+                {/* 아래는 언어 전환이 아니다. 한국어 소개 페이지는 영/태/베의
+                    번역본이 아니라 성격이 다른 한 장이라, 구분선을 그어
+                    "다른 종류"임을 드러낸다. */}
+                <div
+                  style={{
+                    height: 1,
+                    background: "rgba(255,255,255,0.18)",
+                    margin: "4px 8px",
+                  }}
+                />
+                <a
+                  href="https://www.koricare.kr/link/ko/"
+                  hrefLang="ko"
+                  lang="ko"
+                  style={{
+                    padding: "9px 14px",
+                    color: "rgba(255,255,255,0.9)",
+                    fontSize: 13,
+                    fontWeight: 700,
+                    textDecoration: "none",
+                    borderRadius: 8,
+                  }}
+                >
+                  코리케어 소개
+                </a>
               </div>
             )}
           </div>

@@ -148,24 +148,27 @@ export default function Navbar({ scrolled, currentLang = "en" }: NavbarProps) {
             </button>
 
             {/* Clean Dropdown Menu */}
-            {langMenuOpen && (
-              <div
-                style={{
-                  position: "absolute",
-                  right: 0,
-                  top: 42,
-                  background: "#002366",
-                  border: "1.5px solid rgba(255,255,255,0.3)",
-                  borderRadius: 14,
-                  padding: 6,
-                  boxShadow: "0 12px 36px rgba(0,0,0,0.45)",
-                  minWidth: 125,
-                  zIndex: 1000,
-                  display: "flex",
-                  flexDirection: "column",
-                  gap: 3,
-                }}
-              >
+            {/* 조건부 렌더링(`langMenuOpen && …`)이 아니라 항상 렌더링하고
+                display로만 감춘다. 조건부로 두면 메뉴가 닫힌 상태에서
+                링크가 DOM에 아예 없어서 검색엔진이 /th, /vi, 한국어 페이지로
+                가는 내부 링크를 발견하지 못한다. */}
+            <div
+              style={{
+                position: "absolute",
+                right: 0,
+                top: 42,
+                background: "#002366",
+                border: "1.5px solid rgba(255,255,255,0.3)",
+                borderRadius: 14,
+                padding: 6,
+                boxShadow: "0 12px 36px rgba(0,0,0,0.45)",
+                minWidth: 125,
+                zIndex: 1000,
+                display: langMenuOpen ? "flex" : "none",
+                flexDirection: "column",
+                gap: 3,
+              }}
+            >
                 <a
                   href="/"
                   style={{
@@ -232,8 +235,7 @@ export default function Navbar({ scrolled, currentLang = "en" }: NavbarProps) {
                 >
                   코리케어 소개
                 </a>
-              </div>
-            )}
+            </div>
           </div>
         </div>
       </div>

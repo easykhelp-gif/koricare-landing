@@ -218,21 +218,40 @@ export default function CTASection({ lang = "en" }: CTASectionProps) {
           >
             Kori Care · 코리케어 · โครีแคร์
           </p>
-          <a
-            href="https://docs.google.com/document/d/e/2PACX-1vQIjmBDUa6lTRNLATBxdh7Haa3BOYAjX8F66nfSLMvfXW4dXRJuT-MW4HwonfigVfaP_c4ZgqpvgPyz/pub"
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{
-              fontSize: 11,
-              color: "#a0aec0",
-              textDecoration: "underline",
-              display: "inline-block",
-              marginTop: 6,
-              transition: "color 0.2s ease",
-            }}
-          >
-            Privacy Policy (개인정보처리방침)
-          </a>
+          <div style={{ marginTop: 6, display: "flex", justifyContent: "center", alignItems: "center", gap: 8, flexWrap: "wrap" }}>
+            <a
+              href="https://docs.google.com/document/d/e/2PACX-1vQIjmBDUa6lTRNLATBxdh7Haa3BOYAjX8F66nfSLMvfXW4dXRJuT-MW4HwonfigVfaP_c4ZgqpvgPyz/pub"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{
+                fontSize: 11,
+                color: "#a0aec0",
+                textDecoration: "underline",
+                display: "inline-block",
+                transition: "color 0.2s ease",
+              }}
+            >
+              Privacy Policy (개인정보처리방침)
+            </a>
+            <span style={{ fontSize: 11, color: "#4a5568" }} aria-hidden="true">·</span>
+            {/* 한국어 소개 페이지. 한국어 검색으로 유입되는 사람을 위한 것이라
+                언어 전환이 아니라 별도 콘텐츠 링크로 둔다. 링크가 하나도 없으면
+                고립 페이지가 되어 색인이 지연된다. */}
+            <a
+              href="https://www.koricare.kr/link/ko/"
+              hrefLang="ko"
+              lang="ko"
+              style={{
+                fontSize: 11,
+                color: "#a0aec0",
+                textDecoration: "underline",
+                display: "inline-block",
+                transition: "color 0.2s ease",
+              }}
+            >
+              코리케어 소개
+            </a>
+          </div>
         </div>
       </div>
     </section>

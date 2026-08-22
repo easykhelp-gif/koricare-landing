@@ -58,10 +58,11 @@ export default function VietnameseLayout({ children }: { children: React.ReactNo
               "@context": "https://schema.org",
               "@type": "Organization",
               "name": "Kori Care",
-              "alternateName": ["코리케어", "Kori Care Việt Nam"],
+              "alternateName": ["Koricare", "KoriCare", "코리케어", "Kori Care Việt Nam", "Kori Care Korea"],
               "url": "https://www.koricare.kr/vi",
               "logo": "https://www.koricare.kr/koricare_main_logo_nobg.png",
               "sameAs": [
+                "https://www.facebook.com/koricare.kr/",
                 "https://m.me/koricare.kr",
                 "https://line.me/R/ti/p/@768mkjml"
               ],

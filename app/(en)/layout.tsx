@@ -10,26 +10,29 @@ export const metadata: Metadata = {
     "Korea Foreigner Portal", "Severance Pay Calculator Korea", "Foreign Worker Support Korea", 
     "HiKorea Visa", "Korean Labor Standards Act"
   ],
+  // 공유 미리보기용. KakaoTalk 은 제목을 40자 안팎에서 자르므로 og:title 은 짧게 둔다.
+  // 페이지 <title> 은 검색용이라 길어도 된다 — 둘을 같게 맞추지 말 것.
   openGraph: {
-    title: "Kori Care | Official Korea Support Portal for Foreign Residents",
-    description: "Official Kori Care platform providing legal severance pay calculator, visa consultation, medical booking, and foreigner directories in South Korea.",
+    title: "Kori Care — Korea Life Guide for Foreigners",
+    description: "Severance pay, labor rights, visas, hospitals, banking and housing — practical help for foreign residents in Korea.",
     type: "website",
     siteName: "Kori Care",
     url: "https://www.koricare.kr",
     images: [
       {
-        url: "https://www.koricare.kr/link/koricare_main_logo_nobg.png",
-        width: 512,
-        height: 512,
-        alt: "Kori Care Official Logo",
+        url: "https://www.koricare.kr/link/og/koricare_og_en.png",
+        width: 1200,
+        height: 630,
+        alt: "Kori Care — Severance, Law, Daily life, Safety, Housing",
       }
     ],
   },
+  // summary 는 작은 정사각 카드다. 1200x630 을 배너로 띄우려면 summary_large_image 여야 한다.
   twitter: {
-    card: "summary",
-    title: "Kori Care | Official Korea Support Portal for Foreign Residents",
-    description: "Official Kori Care platform providing legal severance pay calculator, visa consultation, medical booking, and foreigner directories in South Korea.",
-    images: ["https://www.koricare.kr/link/koricare_main_logo_nobg.png"],
+    card: "summary_large_image",
+    title: "Kori Care — Korea Life Guide for Foreigners",
+    description: "Severance pay, labor rights, visas, hospitals, banking and housing — practical help for foreign residents in Korea.",
+    images: ["https://www.koricare.kr/link/og/koricare_og_en.png"],
   },
   icons: {
     icon: "https://www.koricare.kr/link/koricare_main_logo_nobg.png",

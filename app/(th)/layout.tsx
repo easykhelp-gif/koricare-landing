@@ -27,12 +27,19 @@ export const metadata: Metadata = {
     locale: "th_TH",
     images: [
       {
-        url: "https://www.koricare.kr/link/koricare_main_logo_nobg.png",
-        width: 512,
-        height: 512,
-        alt: "Kori Care Official Logo",
+        url: "https://www.koricare.kr/link/og/koricare_og_th.png",
+        width: 1200,
+        height: 630,
+        alt: "Kori Care — เงินชดเชย กฎหมาย ชีวิตประจำวัน ความปลอดภัย ที่พัก",
       }
     ],
+  },
+  // 없으면 summary 로 떨어져 작은 정사각 카드가 된다.
+  twitter: {
+    card: "summary_large_image",
+    title: "Kori Care | คู่มือช่วยเหลือการใช้ชีวิตในเกาหลี",
+    description: "พอร์ทัลรวบรวมบริการทางการและสถานที่สำคัญสำหรับคนต่างชาติในเกาหลี — วีซ่า โอนเงิน โรงพยาบาล คำนวณเงินชดเชย",
+    images: ["https://www.koricare.kr/link/og/koricare_og_th.png"],
   },
 };
 

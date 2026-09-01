@@ -19,8 +19,10 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "Kori Care | Cổng thông tin hỗ trợ đời sống tại Hàn Quốc",
-    description: "Trang chủ chính thức Kori Care cung cấp công cụ tính trợ cấp thôi việc, tư vấn visa, y tế và thư mục dịch vụ cho người Việt tại Hàn Quốc.",
+    // anh chị / cứ nhắn — bạn 보다 정중하고 사람 냄새가 난다.
+    // ở Hàn 은 재한 베트남인이 한국을 부르는 말이다.
+    title: "Kori Care | Cẩm nang sống ở Hàn",
+    description: "Trợ cấp thôi việc, nợ lương, bệnh viện, giấy tờ hành chính, tìm nhà — mọi việc trong cuộc sống ở Hàn, anh chị cứ nhắn cho Kori Care. Miễn phí.",
     type: "website",
     siteName: "Kori Care",
     url: "https://www.koricare.kr/vi",
@@ -37,8 +39,10 @@ export const metadata: Metadata = {
   // 없으면 summary 로 떨어져 작은 정사각 카드가 된다.
   twitter: {
     card: "summary_large_image",
-    title: "Kori Care | Cổng thông tin hỗ trợ đời sống tại Hàn Quốc",
-    description: "Trang chủ chính thức Kori Care cung cấp công cụ tính trợ cấp thôi việc, tư vấn visa, y tế và thư mục dịch vụ cho người Việt tại Hàn Quốc.",
+    // anh chị / cứ nhắn — bạn 보다 정중하고 사람 냄새가 난다.
+    // ở Hàn 은 재한 베트남인이 한국을 부르는 말이다.
+    title: "Kori Care | Cẩm nang sống ở Hàn",
+    description: "Trợ cấp thôi việc, nợ lương, bệnh viện, giấy tờ hành chính, tìm nhà — mọi việc trong cuộc sống ở Hàn, anh chị cứ nhắn cho Kori Care. Miễn phí.",
     images: ["https://www.koricare.kr/link/og/koricare_og_vi.png"],
   },
 };

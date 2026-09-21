@@ -159,7 +159,7 @@ export default function CTASection({ lang = "en" }: CTASectionProps) {
 
           <a
             id="cta-fb-btn"
-            href="https://m.me/koricare.kr"
+            href="https://m.me/theokoricare"
             target="_blank"
             rel="noopener noreferrer"
             className="btn-3d"

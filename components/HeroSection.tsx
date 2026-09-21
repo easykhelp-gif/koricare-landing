@@ -25,7 +25,7 @@ export default function HeroSection({ lang = "en" }: HeroSectionProps) {
       calcBtn: "Severance Pay Calculator",
       calcUrl: "https://www.koricare.kr/link/severance-calculator",
       fbBtn: "Facebook Messenger",
-      fbUrl: "https://m.me/koricare.kr",
+      fbUrl: "https://m.me/theokoricare",
       lineBtn: "LINE Chat",
       lineUrl: "https://line.me/R/ti/p/@768mkjml"
     },
@@ -39,7 +39,7 @@ export default function HeroSection({ lang = "en" }: HeroSectionProps) {
       calcBtn: "โปรแกรมคำนวณเงินชดเชย",
       calcUrl: "https://www.koricare.kr/link/th/severance-calculator",
       fbBtn: "Facebook Messenger",
-      fbUrl: "https://m.me/koricare.kr",
+      fbUrl: "https://m.me/theokoricare",
       lineBtn: "LINE Chat",
       lineUrl: "https://line.me/R/ti/p/@768mkjml"
     },
@@ -53,7 +53,7 @@ export default function HeroSection({ lang = "en" }: HeroSectionProps) {
       calcBtn: "Tính tiền trợ cấp thôi việc",
       calcUrl: "https://www.koricare.kr/link/vi/severance-calculator",
       fbBtn: "Facebook Messenger",
-      fbUrl: "https://m.me/koricare.kr",
+      fbUrl: "https://m.me/theokoricare",
       lineBtn: "LINE Chat",
       lineUrl: "https://line.me/R/ti/p/@768mkjml"
     }

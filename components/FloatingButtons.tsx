@@ -68,7 +68,7 @@ export default function FloatingButtons() {
         {/* Facebook button */}
         <a
           id="fab-fb-btn"
-          href="https://m.me/koricare.kr"
+          href="https://m.me/theokoricare"
           target="_blank"
           rel="noopener noreferrer"
           style={{

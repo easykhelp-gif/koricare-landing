@@ -74,7 +74,7 @@ export default function VietnameseLayout({ children }: { children: React.ReactNo
               "logo": "https://www.koricare.kr/koricare_main_logo_nobg.png",
               "sameAs": [
                 "https://www.facebook.com/koricare.kr/",
-                "https://m.me/koricare.kr",
+                "https://m.me/theokoricare",
                 "https://line.me/R/ti/p/@768mkjml"
               ],
               "description": "Your lifestyle helper in Korea.",

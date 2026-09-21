@@ -70,7 +70,6 @@ export default function ThaiLayout({ children }: { children: React.ReactNode }) 
               "url": "https://www.koricare.kr/th",
               "logo": "https://www.koricare.kr/koricare_main_logo_nobg.png",
               "sameAs": [
-                "https://www.facebook.com/koricare.kr/",
                 "https://m.me/theokoricare",
                 "https://line.me/R/ti/p/@768mkjml"
               ],

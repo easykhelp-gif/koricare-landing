@@ -24,7 +24,9 @@ export default function HeroSection({ lang = "en" }: HeroSectionProps) {
       linksUrl: "https://www.koricare.kr/link/",
       calcBtn: "Severance Pay Calculator",
       calcUrl: "https://www.koricare.kr/link/severance-calculator",
-      fbBtn: "Facebook Messenger",
+      nameBtn: "Your Korean Name",
+      nameUrl: "https://www.koricare.kr/link/korean-name/?ref=home",
+      fbBtn: "Messenger",
       fbUrl: "https://m.me/theokoricare",
       lineBtn: "LINE Chat",
       lineUrl: "https://line.me/R/ti/p/@768mkjml"
@@ -38,7 +40,9 @@ export default function HeroSection({ lang = "en" }: HeroSectionProps) {
       linksUrl: "https://www.koricare.kr/link/th/",
       calcBtn: "โปรแกรมคำนวณเงินชดเชย",
       calcUrl: "https://www.koricare.kr/link/th/severance-calculator",
-      fbBtn: "Facebook Messenger",
+      nameBtn: "ชื่อเกาหลีของคุณ",
+      nameUrl: "https://www.koricare.kr/link/th/korean-name/?ref=home",
+      fbBtn: "Messenger",
       fbUrl: "https://m.me/theokoricare",
       lineBtn: "LINE Chat",
       lineUrl: "https://line.me/R/ti/p/@768mkjml"
@@ -52,7 +56,9 @@ export default function HeroSection({ lang = "en" }: HeroSectionProps) {
       linksUrl: "https://www.koricare.kr/link/vi/",
       calcBtn: "Tính tiền trợ cấp thôi việc",
       calcUrl: "https://www.koricare.kr/link/vi/severance-calculator",
-      fbBtn: "Facebook Messenger",
+      nameBtn: "Tên Hàn của bạn",
+      nameUrl: "https://www.koricare.kr/link/vi/korean-name/?ref=home",
+      fbBtn: "Messenger",
       fbUrl: "https://m.me/theokoricare",
       lineBtn: "LINE Chat",
       lineUrl: "https://line.me/R/ti/p/@768mkjml"
@@ -179,7 +185,7 @@ export default function HeroSection({ lang = "en" }: HeroSectionProps) {
           {t.sub}
         </p>
 
-        {/* CTA Buttons in exact priority order: 1. Calculator (TOP) -> 2. Useful Links -> 3. FB -> 4. LINE */}
+        {/* CTA Buttons in order: 1. Useful Links -> 2. Calculator -> 3. Korean name -> 4. FB | LINE */}
         <div
           className={loaded ? "animate-fade-up delay-300" : ""}
           style={{
@@ -191,46 +197,18 @@ export default function HeroSection({ lang = "en" }: HeroSectionProps) {
             maxWidth: 320,
           }}
         >
-          {/* 1. Severance Pay Calculator Button (TOP Priority) */}
-          <a
-            id="hero-calc-btn"
-            className="btn-3d"
-            href={t.calcUrl}
-            style={{
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              gap: 10,
-              background: "linear-gradient(135deg, #1d4ed8 0%, #3b82f6 100%)",
-              color: "white",
-              padding: "16px 24px",
-              borderRadius: 16,
-              fontSize: 15.5,
-              fontWeight: 800,
-              textDecoration: "none",
-              boxShadow: "0 8px 24px rgba(29,78,216,0.5), 0 2px 8px rgba(0,0,0,0.3)",
-              transition: "all 0.25s ease",
-            }}
-          >
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" style={{ flexShrink: 0 }}>
-              <rect x="4" y="2" width="16" height="20" rx="2" />
-              <line x1="8" y1="6" x2="16" y2="6" />
-              <line x1="16" y1="14" x2="16" y2="18" />
-              <path d="M8 10h.01M12 10h.01M16 10h.01M8 14h.01M12 14h.01M8 18h.01M12 18h.01" />
-            </svg>
-            {t.calcBtn}
-          </a>
-
-          {/* 2. Useful Links & Directory Button */}
+          {/* 1~3. Links, calculator, name: one grid so icons and labels line up in columns */}
+          <div style={{ display: "grid", gridTemplateColumns: "1fr 20px minmax(0, max-content) 1fr", columnGap: 10, rowGap: 12 }}>
+          {/* 1. Useful Links & Directory Button */}
           <a
             id="hero-portal-btn"
             className="btn-3d"
             href={t.linksUrl}
             style={{
-              display: "flex",
+              gridColumn: "1 / -1",
+              display: "grid",
+              gridTemplateColumns: "subgrid",
               alignItems: "center",
-              justifyContent: "center",
-              gap: 10,
               background: "rgba(255,255,255,0.18)",
               border: "1.5px solid rgba(255,255,255,0.55)",
               color: "white",
@@ -244,14 +222,78 @@ export default function HeroSection({ lang = "en" }: HeroSectionProps) {
               transition: "all 0.25s ease",
             }}
           >
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" style={{ flexShrink: 0 }}>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" style={{ gridColumn: 2 }}>
               <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" />
               <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" />
             </svg>
-            {t.linksBtn}
+            <span style={{ gridColumn: 3, textAlign: "left" }}>{t.linksBtn}</span>
           </a>
 
-          {/* 3. Facebook Messenger Button */}
+          {/* 2. Severance Pay Calculator Button */}
+          <a
+            id="hero-calc-btn"
+            className="btn-3d"
+            href={t.calcUrl}
+            style={{
+              gridColumn: "1 / -1",
+              display: "grid",
+              gridTemplateColumns: "subgrid",
+              alignItems: "center",
+              background: "linear-gradient(135deg, #1d4ed8 0%, #3b82f6 100%)",
+              color: "white",
+              padding: "16px 24px",
+              borderRadius: 16,
+              fontSize: 15.5,
+              fontWeight: 800,
+              textDecoration: "none",
+              boxShadow: "0 8px 24px rgba(29,78,216,0.5), 0 2px 8px rgba(0,0,0,0.3)",
+              transition: "all 0.25s ease",
+            }}
+          >
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" style={{ gridColumn: 2 }}>
+              <rect x="4" y="2" width="16" height="20" rx="2" />
+              <line x1="8" y1="6" x2="16" y2="6" />
+              <line x1="16" y1="14" x2="16" y2="18" />
+              <path d="M8 10h.01M12 10h.01M16 10h.01M8 14h.01M12 14h.01M8 18h.01M12 18h.01" />
+            </svg>
+            <span style={{ gridColumn: 3, textAlign: "left" }}>{t.calcBtn}</span>
+          </a>
+
+          {/* 3. Korean name (Saju) Button */}
+          <a
+            id="hero-name-btn"
+            className="btn-3d"
+            href={t.nameUrl}
+            style={{
+              gridColumn: "1 / -1",
+              display: "grid",
+              gridTemplateColumns: "subgrid",
+              alignItems: "center",
+              background: "rgba(255,255,255,0.18)",
+              border: "1.5px solid rgba(255,255,255,0.55)",
+              color: "white",
+              padding: "15px 24px",
+              borderRadius: 16,
+              fontSize: 15,
+              fontWeight: 800,
+              textDecoration: "none",
+              backdropFilter: "blur(12px)",
+              boxShadow: "0 6px 20px rgba(0,0,0,0.2)",
+              transition: "all 0.25s ease",
+            }}
+          >
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#f8dc93" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" style={{ gridColumn: 2 }}>
+              <circle cx="12" cy="12" r="9" />
+              <path d="M12 3a4.5 4.5 0 0 1 0 9a4.5 4.5 0 0 0 0 9" />
+              <circle cx="12" cy="7.5" r="1.1" fill="#f8dc93" />
+              <circle cx="12" cy="16.5" r="1.1" />
+            </svg>
+            <span style={{ gridColumn: 3, textAlign: "left" }}>{t.nameBtn}</span>
+          </a>
+          </div>
+
+          {/* 4. Messenger | LINE, one row */}
+          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12 }}>
           <a
             id="hero-fb-btn"
             className="btn-3d"
@@ -263,25 +305,23 @@ export default function HeroSection({ lang = "en" }: HeroSectionProps) {
               alignItems: "center",
               justifyContent: "center",
               gap: 10,
-              background: "rgba(255,255,255,0.12)",
-              border: "1.5px solid rgba(255,255,255,0.4)",
+              background: "linear-gradient(135deg, #00b2ff 0%, #006aff 100%)",
               color: "white",
-              padding: "14px 24px",
+              padding: "14px 16px",
               borderRadius: 16,
               fontSize: 15,
-              fontWeight: 600,
+              fontWeight: 700,
               textDecoration: "none",
-              backdropFilter: "blur(8px)",
+              boxShadow: "0 8px 24px rgba(0,106,255,0.4)",
               transition: "all 0.25s ease",
             }}
           >
             <svg width="20" height="20" viewBox="0 0 24 24" fill="white" style={{ flexShrink: 0 }}>
-              <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+              <path d="M12 2C6.36 2 2 6.13 2 11.7c0 2.91 1.19 5.44 3.14 7.17.16.14.26.35.27.57l.05 1.78c.02.57.6.94 1.12.71l1.98-.87c.17-.08.36-.09.53-.04.91.25 1.88.38 2.91.38 5.64 0 10-4.13 10-9.7S17.64 2 12 2zm6 7.46l-2.94 4.66c-.47.74-1.47.93-2.17.4l-2.34-1.75a.6.6 0 0 0-.72 0l-3.16 2.4c-.42.32-.97-.18-.69-.63l2.94-4.66c.47-.74 1.47-.93 2.17-.4l2.34 1.75a.6.6 0 0 0 .72 0l3.16-2.4c.42-.32.97.18.69.63z"/>
             </svg>
             {t.fbBtn}
           </a>
 
-          {/* 4. LINE Chat Button */}
           <a
             id="hero-line-btn"
             className="btn-3d"
@@ -295,7 +335,7 @@ export default function HeroSection({ lang = "en" }: HeroSectionProps) {
               gap: 10,
               background: "#06C755",
               color: "white",
-              padding: "15px 24px",
+              padding: "14px 16px",
               borderRadius: 16,
               fontSize: 15,
               fontWeight: 700,
@@ -309,6 +349,7 @@ export default function HeroSection({ lang = "en" }: HeroSectionProps) {
             </svg>
             {t.lineBtn}
           </a>
+          </div>
         </div>
 
         {/* Scroll hint */}

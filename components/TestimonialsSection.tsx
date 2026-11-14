@@ -19,6 +19,7 @@ export default function TestimonialsSection({ lang = "en" }: TestimonialsSection
 
   const reviewsMap = {
     en: [
+      { id: "reviewName", avatar: "🙋‍♀️", text: "The Korean name tool is so useful. Rather than just making up a Korean name, I learned which name actually suits me, and now I feel more attached to it. Really interesting!" },
       { id: "review1", avatar: "🙋‍♂️", text: "When I was ill, I didn't know which hospital to visit. The team guided me step by step. So comforting!" },
       { id: "review2", avatar: "🧑‍💻", text: "Korean official documents were so complicated. Kori Care explained everything line by line clearly!" },
       { id: "review3", avatar: "🙋‍♀️", text: "Checked my severance pay (퇴직금) accurately with the calculator. Helped me claim my legitimate rights!" },
@@ -31,6 +32,7 @@ export default function TestimonialsSection({ lang = "en" }: TestimonialsSection
       { id: "review10", avatar: "🧑‍⚕️", text: "Always fast, kind, and accurate response in my own native language. My essential partner in Korea!" }
     ],
     th: [
+      { id: "reviewName", avatar: "🙋‍♀️", text: "โปรแกรมตั้งชื่อเกาหลีมีประโยชน์มาก แทนที่จะตั้งชื่อเกาหลีเองแบบไม่มีหลัก พอรู้ว่าชื่อไหนเหมาะกับตัวเองจริง ๆ ก็รู้สึกผูกพันกับชื่อตัวเองมากขึ้น น่าสนใจมากค่ะ!" },
       { id: "review1", avatar: "🙋‍♂️", text: "ตอนที่ฉันเจ็บป่วย ไม่รู้ว่าจะไปโรงพยาบาลไหน ทีมงานช่วยแนะนำและดูแลเป็นขั้นตอน รู้สึกอุ่นใจมาก!" },
       { id: "review2", avatar: "🧑‍💻", text: "เอกสารทางการของเกาหลียุ่งยากมาก โคริแคร์ช่วยอธิบายอย่างชัดเจน ทำให้ทำเรื่องเสร็จเรียบร้อย!" },
       { id: "review3", avatar: "🙋‍♀️", text: "คำนวณเงินชดเชยได้อย่างถูกต้องด้วยโปรแกรม ช่วยให้ฉันได้รับสิทธิอันชอบธรรมครบถ้วน" },
@@ -43,6 +45,7 @@ export default function TestimonialsSection({ lang = "en" }: TestimonialsSection
       { id: "review10", avatar: "🧑‍⚕️", text: "ตอบกลับรวดเร็ว สุภาพ และถูกต้องเป็นภาษาไทยเสมอ เพื่อนคู่คิดที่ขาดไม่ได้ในเกาหลี!" }
     ],
     vi: [
+      { id: "reviewName", avatar: "🙋‍♀️", text: "Công cụ đặt tên tiếng Hàn rất hữu ích. Thay vì tự đặt đại một cái tên, khi biết tên nào thật sự hợp với mình, tôi thấy gắn bó với tên của mình hơn. Rất thú vị!" },
       { id: "review1", avatar: "🙋‍♂️", text: "Khi bị ốm, tôi không biết nên đi bệnh viện nào. Đội ngũ đã hướng dẫn từng bước rất tận tình. Rất an tâm!" },
       { id: "review2", avatar: "🧑‍💻", text: "Thủ tục giấy tờ tại Hàn Quốc rất phức tạp. Kori Care đã giải thích rõ ràng từng chi tiết!" },
       { id: "review3", avatar: "🙋‍♀️", text: "Tính tiền trợ cấp thôi việc chính xác bằng công cụ. Giúp tôi bảo vệ quyền lợi chính đáng của mình!" },

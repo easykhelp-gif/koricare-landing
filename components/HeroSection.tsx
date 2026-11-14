@@ -185,7 +185,7 @@ export default function HeroSection({ lang = "en" }: HeroSectionProps) {
           {t.sub}
         </p>
 
-        {/* CTA Buttons in order: 1. Useful Links -> 2. Calculator -> 3. Korean name -> 4. FB | LINE */}
+        {/* CTA Buttons in order: 1. Useful Links -> 2. Korean name -> 3. Calculator -> 4. FB | LINE */}
         <div
           className={loaded ? "animate-fade-up delay-300" : ""}
           style={{
@@ -229,37 +229,7 @@ export default function HeroSection({ lang = "en" }: HeroSectionProps) {
             <span style={{ gridColumn: 3, textAlign: "left" }}>{t.linksBtn}</span>
           </a>
 
-          {/* 2. Severance Pay Calculator Button */}
-          <a
-            id="hero-calc-btn"
-            className="btn-3d"
-            href={t.calcUrl}
-            style={{
-              gridColumn: "1 / -1",
-              display: "grid",
-              gridTemplateColumns: "subgrid",
-              alignItems: "center",
-              background: "linear-gradient(135deg, #1d4ed8 0%, #3b82f6 100%)",
-              color: "white",
-              padding: "16px 24px",
-              borderRadius: 16,
-              fontSize: 15.5,
-              fontWeight: 800,
-              textDecoration: "none",
-              boxShadow: "0 8px 24px rgba(29,78,216,0.5), 0 2px 8px rgba(0,0,0,0.3)",
-              transition: "all 0.25s ease",
-            }}
-          >
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" style={{ gridColumn: 2 }}>
-              <rect x="4" y="2" width="16" height="20" rx="2" />
-              <line x1="8" y1="6" x2="16" y2="6" />
-              <line x1="16" y1="14" x2="16" y2="18" />
-              <path d="M8 10h.01M12 10h.01M16 10h.01M8 14h.01M12 14h.01M8 18h.01M12 18h.01" />
-            </svg>
-            <span style={{ gridColumn: 3, textAlign: "left" }}>{t.calcBtn}</span>
-          </a>
-
-          {/* 3. Korean name (Saju) Button */}
+          {/* 2. Korean name (Saju) Button */}
           <a
             id="hero-name-btn"
             className="btn-3d"
@@ -289,6 +259,36 @@ export default function HeroSection({ lang = "en" }: HeroSectionProps) {
               <circle cx="12" cy="16.5" r="1.1" />
             </svg>
             <span style={{ gridColumn: 3, textAlign: "left" }}>{t.nameBtn}</span>
+          </a>
+
+          {/* 3. Severance Pay Calculator Button */}
+          <a
+            id="hero-calc-btn"
+            className="btn-3d"
+            href={t.calcUrl}
+            style={{
+              gridColumn: "1 / -1",
+              display: "grid",
+              gridTemplateColumns: "subgrid",
+              alignItems: "center",
+              background: "linear-gradient(135deg, #1d4ed8 0%, #3b82f6 100%)",
+              color: "white",
+              padding: "16px 24px",
+              borderRadius: 16,
+              fontSize: 15.5,
+              fontWeight: 800,
+              textDecoration: "none",
+              boxShadow: "0 8px 24px rgba(29,78,216,0.5), 0 2px 8px rgba(0,0,0,0.3)",
+              transition: "all 0.25s ease",
+            }}
+          >
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" style={{ gridColumn: 2 }}>
+              <rect x="4" y="2" width="16" height="20" rx="2" />
+              <line x1="8" y1="6" x2="16" y2="6" />
+              <line x1="16" y1="14" x2="16" y2="18" />
+              <path d="M8 10h.01M12 10h.01M16 10h.01M8 14h.01M12 14h.01M8 18h.01M12 18h.01" />
+            </svg>
+            <span style={{ gridColumn: 3, textAlign: "left" }}>{t.calcBtn}</span>
           </a>
           </div>
 

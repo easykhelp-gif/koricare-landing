@@ -373,3 +373,18 @@ body {
     transition: none;
   }
 }
+
+/* Navbar on narrow phones: keep "Kori Care" and "Life Helper" on one line each.
+   The language button shows a short code (EN, TH, VI) and Contact Us gets
+   narrower side padding, so the brand has room. */
+.nav-lang-short { display: none; }
+@media (max-width: 420px) {
+  .nav-lang-long { display: none; }
+  .nav-lang-short { display: inline; }
+  .nav-right { gap: 8px !important; }
+  #nav-cta-btn { padding: 7px 12px !important; }
+}
+@media (max-width: 380px) {
+  .nav-brand { font-size: 15px !important; }
+  .nav-right { gap: 6px !important; }
+}

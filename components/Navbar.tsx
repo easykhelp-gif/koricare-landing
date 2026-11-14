@@ -60,6 +60,7 @@ export default function Navbar({ scrolled, currentLang = "en" }: NavbarProps) {
           />
           <div style={{ display: "flex", flexDirection: "column", justifyContent: "center" }}>
             <span
+              className="nav-brand"
               style={{
                 fontWeight: 900,
                 fontSize: 16.5,
@@ -68,7 +69,8 @@ export default function Navbar({ scrolled, currentLang = "en" }: NavbarProps) {
                 transition: "color 0.3s",
                 display: "block",
                 lineHeight: 1.0,
-                marginBottom: 2,
+                marginBottom: 3,
+                whiteSpace: "nowrap",
                 textShadow: scrolled ? "none" : "0 1px 8px rgba(0,0,0,0.5)",
               }}
             >
@@ -83,6 +85,7 @@ export default function Navbar({ scrolled, currentLang = "en" }: NavbarProps) {
                 textTransform: "uppercase",
                 transition: "color 0.3s",
                 lineHeight: 1.0,
+                whiteSpace: "nowrap",
               }}
             >
               Life Helper
@@ -90,7 +93,7 @@ export default function Navbar({ scrolled, currentLang = "en" }: NavbarProps) {
           </div>
         </div>
 
-        <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
+        <div className="nav-right" style={{ display: "flex", alignItems: "center", gap: 10 }}>
           {/* Contact Us button (Placed to the left of Language selector) */}
           <a
             id="nav-cta-btn"
@@ -143,7 +146,8 @@ export default function Navbar({ scrolled, currentLang = "en" }: NavbarProps) {
                 <line x1="2" y1="12" x2="22" y2="12" />
                 <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
               </svg>
-              <span>{langLabels[currentLang]}</span>
+              <span className="nav-lang-long">{langLabels[currentLang]}</span>
+              <span className="nav-lang-short">{currentLang.toUpperCase()}</span>
               <span style={{ fontSize: 9, opacity: 0.85, marginLeft: 2 }}>▼</span>
             </button>
 

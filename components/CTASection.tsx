@@ -220,9 +220,7 @@ export default function CTASection({ lang = "en" }: CTASectionProps) {
           </p>
           <div style={{ marginTop: 6, display: "flex", justifyContent: "center", alignItems: "center", gap: 8, flexWrap: "wrap" }}>
             <a
-              href="https://docs.google.com/document/d/e/2PACX-1vQIjmBDUa6lTRNLATBxdh7Haa3BOYAjX8F66nfSLMvfXW4dXRJuT-MW4HwonfigVfaP_c4ZgqpvgPyz/pub"
-              target="_blank"
-              rel="noopener noreferrer"
+              href={lang === "en" ? "/privacy" : `/privacy#${lang}`}
               style={{
                 fontSize: 11,
                 color: "#a0aec0",

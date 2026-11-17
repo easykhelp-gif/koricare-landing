@@ -81,7 +81,7 @@ export default function RootLayout({
                 "https://m.me/theokoricare",
                 "https://line.me/R/ti/p/@768mkjml"
               ],
-              "description": "Your lifestyle helper in Korea.",
+              "description": "Kori Care takes on everyday, labor, visa and medical matters for foreign residents in Korea, assigns each case to the right expert and manages it to completion.",
               "contactPoint": {
                 "@type": "ContactPoint",
                 "contactType": "customer support",

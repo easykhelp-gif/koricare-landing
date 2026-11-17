@@ -10,7 +10,7 @@ export default function HowItWorksSection({ lang = "en" }: HowItWorksSectionProp
       sub: "No complicated procedures. Just tell us what you need.",
       steps: [
         { num: "01", icon: "💬", title: "Send Us a Message", desc: "Reach out via Messenger or LINE anytime in your language." },
-        { num: "02", icon: "🤝", title: "Immediate Assistance", desc: "Kori Care takes action right away—acting like your personal Korean friend." },
+        { num: "02", icon: "🤝", title: "The Right Expert, Assigned", desc: "Kori Care puts the right expert from our network of labor attorneys, administrative agents and lawyers on your case." },
         { num: "03", icon: "✅", title: "Problem Resolved", desc: "We keep you updated continuously until your issue is fully completed." }
       ]
     },
@@ -20,7 +20,7 @@ export default function HowItWorksSection({ lang = "en" }: HowItWorksSectionProp
       sub: "ไม่มีขั้นตอนยุ่งยาก เพียงบอกเราว่าคุณต้องการอะไร",
       steps: [
         { num: "01", icon: "💬", title: "ส่งข้อความถึงเรา", desc: "ทักทายเราผ่าน Messenger หรือ LINE ได้ตลอดเวลาด้วยภาษาของคุณเอง" },
-        { num: "02", icon: "🤝", title: "รับความช่วยเหลือทันที", desc: "โคริแคร์ดำเนินการทันที ดุจเพื่อนคนเกาหลีส่วนตัวที่คอยช่วยเหลือคุณ" },
+        { num: "02", icon: "🤝", title: "มอบหมายผู้เชี่ยวชาญที่ใช่", desc: "โคริแคร์มอบหมายผู้เชี่ยวชาญที่เหมาะกับเรื่องของคุณ จากเครือข่ายที่ปรึกษาด้านแรงงาน ผู้เชี่ยวชาญด้านเอกสารราชการ และทนายความของเรา" },
         { num: "03", icon: "✅", title: "แก้ปัญหาเรียบร้อย", desc: "เราอัปเดตสถานะให้คุณทราบอย่างต่อเนื่องจนกว่าปัญหาของคุณจะได้รับการแก้ไข" }
       ]
     },
@@ -30,7 +30,7 @@ export default function HowItWorksSection({ lang = "en" }: HowItWorksSectionProp
       sub: "Không thủ tục rườm rà. Chỉ cần cho chúng tôi biết bạn cần gì.",
       steps: [
         { num: "01", icon: "💬", title: "Gửi tin nhắn cho chúng tôi", desc: "Liên hệ qua Messenger hoặc LINE bất kỳ lúc nào bằng ngôn ngữ của bạn." },
-        { num: "02", icon: "🤝", title: "Nhận hỗ trợ ngay lập tức", desc: "Kori Care xử lý ngay—như một người bạn Hàn Quốc đồng hành cùng bạn." },
+        { num: "02", icon: "🤝", title: "Giao đúng chuyên gia", desc: "Kori Care giao hồ sơ của bạn cho đúng chuyên gia trong mạng lưới chuyên gia lao động, chuyên viên hành chính và luật sư của chúng tôi." },
         { num: "03", icon: "✅", title: "Giải quyết xong vấn đề", desc: "Chúng tôi cập nhật liên tục cho đến khi yêu cầu được hoàn thành." }
       ]
     }
